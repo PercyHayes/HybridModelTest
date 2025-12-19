@@ -1,0 +1,29 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../src/testbench/Mul128Tb/tb_Mul_Adder_Tree_128.cpp in debug mode
+   Compiling ../../../../../src/main/Mul_Adder_Tree_128.cpp in debug mode
+   Generating csim.exe
+--- Starting Testbench for Mul_Adder_Tree_128 ---
+Loading input data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/input_data.bin'...
+Successfully loaded 3584 input vectors.
+Loading packed weight data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/weight_data.bin'...
+Successfully loaded 3584 packed weight vectors.
+Loading reference output data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/output_data.bin'...
+Successfully loaded 3584 reference outputs.
+
+Calling HLS function Mul_Adder_Tree_128...
+HLS function execution finished.
+
+Verifying output against reference data...
+
+========== Test Summary ==========
+Total iterations: 3584
+✓ All outputs match the reference data!
+Maximum absolute error: 0.125000
+Average absolute error: 0.026240
+==================================
+
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 3584
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

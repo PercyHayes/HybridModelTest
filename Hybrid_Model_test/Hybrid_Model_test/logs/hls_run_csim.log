@@ -1,0 +1,143 @@
+  **** HLS Build v2025.1.1 6214317
+INFO: [HLS 200-2005] Using work_dir /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg
+WARNING: [HLS 200-2001] file not found '../src/include/weight_loader.h' see [hls] from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(13)
+WARNING: [HLS 200-2001] file not found '../src/main/weight_loader.cpp' see [hls] from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(15)
+WARNING: [HLS 200-2001] file not found '../src/include/scale_loader_distributor.h' see [hls] from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(16)
+WARNING: [HLS 200-2001] file not found '../src/main/scale_loader_distributor.cpp' see [hls] from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(17)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/common/params.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/common/params.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Mul_Adder_Tree_128.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Mul_Adder_Tree_128.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/weight_loader.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(13)
+WARNING: [HLS 200-40] Cannot find design file '../src/include/weight_loader.h'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Mul_Adder_Tree_128.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Mul_Adder_Tree_128.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/weight_loader.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(15)
+WARNING: [HLS 200-40] Cannot find design file '../src/main/weight_loader.cpp'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/scale_loader_distributor.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(16)
+WARNING: [HLS 200-40] Cannot find design file '../src/include/scale_loader_distributor.h'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/scale_loader_distributor.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(17)
+WARNING: [HLS 200-40] Cannot find design file '../src/main/scale_loader_distributor.cpp'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Accumulator_Quantizer.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Accumulator_Quantizer.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Bias_Merger.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Bias_Merger.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Gemv_Test.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Gemv_Test.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Scale_Loader_Distributor.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Scale_Loader_Distributor.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Stream_Copy.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(22)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Stream_Copy.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Weight_Loader.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Weight_Loader.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Accumulator_Quantizer.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(24)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Accumulator_Quantizer.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Bias_Merger.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Bias_Merger.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Gemv_Test.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(26)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Gemv_Test.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Scale_Loader_Distributor.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Scale_Loader_Distributor.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Stream_Copy.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Stream_Copy.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Weight_Loader.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(29)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Weight_Loader.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../src/testbench/Gemv_Test/tb_Gemv_Test.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding test bench file '/home/percy/data/HDL/HybridModelTest/src/testbench/Gemv_Test/tb_Gemv_Test.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=Gemv_Test' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcv80-lsva4737-2MHP-e-S' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2MHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcv80-lsva4737-2MHP-e-S'
+INFO: [HLS 200-1465] Applying config ini 'clock=200MHz' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+--- Starting Testbench for Gemv_Test ---
+Loading weight data...
+Loading input activation data...
+Loading bias data...
+Loading reference output data...
+Loading scaling data...
+
+Calling HLS function Gemv_Test...
+data: -0.795898, weight: 6
+data: -1.0498, weight: -7
+data: -1.48535, weight: 2
+data: -1.40234, weight: 7
+data: -0.817871, weight: 7
+data: 1.7002, weight: -3
+data: 0.506836, weight: 5
+data: -0.613281, weight: 5
+data: 1.38867, weight: 4
+data: 1.55762, weight: 2
+data: -1.77734, weight: 3
+result: 16.8438
+acc_value: 92.875, scale_value: 0.0171967acc result: 7.79817
+data: -0.795898, weight: -8
+data: -1.0498, weight: 7
+data: -1.48535, weight: -2
+data: -1.40234, weight: 7
+data: -0.817871, weight: -7
+data: 1.7002, weight: 7
+data: 0.506836, weight: -8
+data: -0.613281, weight: -2
+data: 1.38867, weight: -5
+data: 1.55762, weight: 7
+data: -1.77734, weight: 0
+result: -49.125
+acc_value: -4.0625, scale_value: 0.0287628acc result: -32.9284
+data: -0.795898, weight: 2
+data: -1.0498, weight: 1
+data: -1.48535, weight: 4
+data: -1.40234, weight: 7
+data: -0.817871, weight: 7
+data: 1.7002, weight: -1
+data: 0.506836, weight: 1
+data: -0.613281, weight: -4
+data: 1.38867, weight: 0
+data: 1.55762, weight: -3
+data: -1.77734, weight: -7
+result: -41.8125
+acc_value: -132.75, scale_value: 0.00520325acc result: 5.65427
+data: -0.795898, weight: 0
+data: -1.0498, weight: 7
+data: -1.48535, weight: 7
+data: -1.40234, weight: -5
+data: -0.817871, weight: 7
+data: 1.7002, weight: 3
+data: 0.506836, weight: 6
+data: -0.613281, weight: -5
+data: 1.38867, weight: 0
+data: 1.55762, weight: -4
+data: -1.77734, weight: -1
+result: 70.6875
+acc_value: 69.3125, scale_value: 0.0249939acc result: 4.25829
+Bias_Merger row 0, lane 0: bias_value = -5.48828, bias = 0.0691528, merged_result = -5.41797
+Bias_Merger row 0, lane 1: bias_value = 2.33789, bias = 0.682129, merged_result = 3.01953
+Bias_Merger row 0, lane 2: bias_value = 0.125244, bias = -0.841797, merged_result = -0.716797
+Bias_Merger row 0, lane 3: bias_value = 3.10938, bias = -0.897949, merged_result = 2.21094
+HLS function execution finished.
+
+Verifying output data...
+All outputs match the reference data. Test PASSED.
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 25088
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 13.66 seconds. Total CPU system time: 1.04 seconds. Total elapsed time: 14.6 seconds; peak allocated memory: 668.824 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 18s

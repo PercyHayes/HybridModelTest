@@ -1,0 +1,160 @@
+<ENTRY>
+{
+ "thisFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/Hybrid_Model_test.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Dec 15 23:28:45 2025",
+ "timestampMillis": "1765812525303",
+ "buildStep": {
+  "cmdId": "5cfa0c59-8671-4b99-94cc-7e8d84283dc2",
+  "name": "vitis-run",
+  "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/logs/Hybrid_Model_test.steps.log",
+  "commandLine": "/software/xilinx/2025.1.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --package --config /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg --work_dir Hybrid_Model_test ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg",
+   "--work_dir",
+   "Hybrid_Model_test"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Dec 15 23:28:45 2025",
+ "timestampMillis": "1765812525303",
+ "status": {
+  "cmdId": "5cfa0c59-8671-4b99-94cc-7e8d84283dc2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Dec 15 23:28:53 2025",
+ "timestampMillis": "1765812533174",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Mul_Adder_Tree_128",
+     "file": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/Mul_Adder_Tree_128.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/percy/data/HDL/HybridModelTest/src/common/params.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Mul_Adder_Tree_128.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/weight_loader.h",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Mul_Adder_Tree_128.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/weight_loader.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Dec 15 23:28:53 2025",
+ "timestampMillis": "1765812533176",
+ "buildStep": {
+  "cmdId": "fab9b4d9-f542-48f4-a86e-3ea388039483",
+  "name": "",
+  "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Dec 15 23:28:53 2025",
+ "timestampMillis": "1765812533177",
+ "status": {
+  "cmdId": "fab9b4d9-f542-48f4-a86e-3ea388039483",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Dec 15 23:29:13 2025",
+ "timestampMillis": "1765812553617",
+ "status": {
+  "cmdId": "fab9b4d9-f542-48f4-a86e-3ea388039483",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Dec 15 23:29:13 2025",
+ "timestampMillis": "1765812553914",
+ "status": {
+  "cmdId": "5cfa0c59-8671-4b99-94cc-7e8d84283dc2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Dec 15 23:29:13 2025",
+ "timestampMillis": "1765812553915",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Dec 15 23:29:13 2025",
+ "timestampMillis": "1765812553916",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

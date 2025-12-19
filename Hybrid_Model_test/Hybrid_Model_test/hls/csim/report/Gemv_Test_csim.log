@@ -1,0 +1,75 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+make: 'csim.exe' is up to date.
+--- Starting Testbench for Gemv_Test ---
+Loading weight data...
+Loading input activation data...
+Loading bias data...
+Loading reference output data...
+Loading scaling data...
+
+Calling HLS function Gemv_Test...
+data: -0.795898, weight: 6
+data: -1.0498, weight: -7
+data: -1.48535, weight: 2
+data: -1.40234, weight: 7
+data: -0.817871, weight: 7
+data: 1.7002, weight: -3
+data: 0.506836, weight: 5
+data: -0.613281, weight: 5
+data: 1.38867, weight: 4
+data: 1.55762, weight: 2
+data: -1.77734, weight: 3
+result: 16.8438
+acc_value: 92.875, scale_value: 0.0171967acc result: 7.79817
+data: -0.795898, weight: -8
+data: -1.0498, weight: 7
+data: -1.48535, weight: -2
+data: -1.40234, weight: 7
+data: -0.817871, weight: -7
+data: 1.7002, weight: 7
+data: 0.506836, weight: -8
+data: -0.613281, weight: -2
+data: 1.38867, weight: -5
+data: 1.55762, weight: 7
+data: -1.77734, weight: 0
+result: -49.125
+acc_value: -4.0625, scale_value: 0.0287628acc result: -32.9284
+data: -0.795898, weight: 2
+data: -1.0498, weight: 1
+data: -1.48535, weight: 4
+data: -1.40234, weight: 7
+data: -0.817871, weight: 7
+data: 1.7002, weight: -1
+data: 0.506836, weight: 1
+data: -0.613281, weight: -4
+data: 1.38867, weight: 0
+data: 1.55762, weight: -3
+data: -1.77734, weight: -7
+result: -41.8125
+acc_value: -132.75, scale_value: 0.00520325acc result: 5.65427
+data: -0.795898, weight: 0
+data: -1.0498, weight: 7
+data: -1.48535, weight: 7
+data: -1.40234, weight: -5
+data: -0.817871, weight: 7
+data: 1.7002, weight: 3
+data: 0.506836, weight: 6
+data: -0.613281, weight: -5
+data: 1.38867, weight: 0
+data: 1.55762, weight: -4
+data: -1.77734, weight: -1
+result: 70.6875
+acc_value: 69.3125, scale_value: 0.0249939acc result: 4.25829
+Bias_Merger row 0, lane 0: bias_value = -5.48828, bias = 0.0691528, merged_result = -5.41797
+Bias_Merger row 0, lane 1: bias_value = 2.33789, bias = 0.682129, merged_result = 3.01953
+Bias_Merger row 0, lane 2: bias_value = 0.125244, bias = -0.841797, merged_result = -0.716797
+Bias_Merger row 0, lane 3: bias_value = 3.10938, bias = -0.897949, merged_result = 2.21094
+HLS function execution finished.
+
+Verifying output data...
+All outputs match the reference data. Test PASSED.
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 25088
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

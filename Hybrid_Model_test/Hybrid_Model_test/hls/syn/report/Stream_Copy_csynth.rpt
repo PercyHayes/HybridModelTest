@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vitis HLS Report for 'Stream_Copy'
+================================================================
+* Date:           Fri Dec 19 23:43:50 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.205 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |                                                  |                                        |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
+        |                     Instance                     |                 Module                 |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |grp_Stream_Copy_Pipeline_row_loop_col_loop_fu_68  |Stream_Copy_Pipeline_row_loop_col_loop  |    25090|    25090|  0.125 ms|  0.125 ms|  25089|  25089|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|      246|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      2|      127|      255|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|        3|     -|
+|Register             |        -|      -|      137|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      2|      264|      504|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |                     Instance                     |                 Module                 | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |grp_Stream_Copy_Pipeline_row_loop_col_loop_fu_68  |Stream_Copy_Pipeline_row_loop_col_loop  |        0|   0|  127|  255|    0|
+    |mul_29ns_24ns_53_1_1_U87                          |mul_29ns_24ns_53_1_1                    |        0|   2|    0|    0|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+    |Total                                             |                                        |        0|   2|  127|  255|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |sub_ln73_1_fu_113_p2  |         -|   0|  0|  30|           1|          30|
+    |sub_ln73_2_fu_149_p2  |         -|   0|  0|  32|           1|          32|
+    |sub_ln73_3_fu_165_p2  |         -|   0|  0|  25|           1|          25|
+    |sub_ln73_fu_97_p2     |         -|   0|  0|  32|           1|          32|
+    |empty_1097_fu_207_p2  |      icmp|   0|  0|  12|          25|           1|
+    |empty_fu_193_p2       |      icmp|   0|  0|  15|          30|           1|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    |cols_1_fu_181_p3      |    select|   0|  0|  23|           1|          25|
+    |rows_1_fu_129_p3      |    select|   0|  0|  27|           1|          30|
+    |smax3_fu_213_p3       |    select|   0|  0|  22|           1|          24|
+    |smax_fu_199_p3        |    select|   0|  0|  26|           1|          29|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 246|          64|         230|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |ap_NS_fsm   |   1|          4|    1|          4|
+    |ap_done     |   1|          2|    1|          2|
+    |real_start  |   1|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+    |Total       |   3|          8|    3|          8|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+----+----+-----+-----------+
+    |                              Name                             | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                      |   3|   0|    3|          0|
+    |ap_done_reg                                                    |   1|   0|    1|          0|
+    |bound_reg_252                                                  |  53|   0|   53|          0|
+    |cols_1_reg_237                                                 |  25|   0|   25|          0|
+    |grp_Stream_Copy_Pipeline_row_loop_col_loop_fu_68_ap_start_reg  |   1|   0|    1|          0|
+    |smax3_reg_247                                                  |  24|   0|   24|          0|
+    |smax_reg_242                                                   |  29|   0|   29|          0|
+    |start_once_reg                                                 |   1|   0|    1|          0|
+    +---------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                          | 137|   0|  137|          0|
+    +---------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+------+------------+--------------+--------------+
+|          RTL Ports         | Dir | Bits |  Protocol  | Source Object|    C Type    |
++----------------------------+-----+------+------------+--------------+--------------+
+|ap_clk                      |   in|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_rst                      |   in|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_start                    |   in|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|start_full_n                |   in|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_done                     |  out|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_continue                 |   in|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_idle                     |  out|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|ap_ready                    |  out|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|start_out                   |  out|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|start_write                 |  out|     1|  ap_ctrl_hs|   Stream_Copy|  return value|
+|rows                        |   in|    32|     ap_none|          rows|        scalar|
+|cols                        |   in|    32|     ap_none|          cols|        scalar|
+|input_buffer                |   in|    16|     ap_none|  input_buffer|       pointer|
+|dispacher_0_din             |  out|  2048|     ap_fifo|   dispacher_0|       pointer|
+|dispacher_0_full_n          |   in|     1|     ap_fifo|   dispacher_0|       pointer|
+|dispacher_0_write           |  out|     1|     ap_fifo|   dispacher_0|       pointer|
+|dispacher_0_num_data_valid  |   in|    32|     ap_fifo|   dispacher_0|       pointer|
+|dispacher_0_fifo_cap        |   in|    32|     ap_fifo|   dispacher_0|       pointer|
+|dispacher_1_din             |  out|  2048|     ap_fifo|   dispacher_1|       pointer|
+|dispacher_1_full_n          |   in|     1|     ap_fifo|   dispacher_1|       pointer|
+|dispacher_1_write           |  out|     1|     ap_fifo|   dispacher_1|       pointer|
+|dispacher_1_num_data_valid  |   in|    32|     ap_fifo|   dispacher_1|       pointer|
+|dispacher_1_fifo_cap        |   in|    32|     ap_fifo|   dispacher_1|       pointer|
+|dispacher_2_din             |  out|  2048|     ap_fifo|   dispacher_2|       pointer|
+|dispacher_2_full_n          |   in|     1|     ap_fifo|   dispacher_2|       pointer|
+|dispacher_2_write           |  out|     1|     ap_fifo|   dispacher_2|       pointer|
+|dispacher_2_num_data_valid  |   in|    32|     ap_fifo|   dispacher_2|       pointer|
+|dispacher_2_fifo_cap        |   in|    32|     ap_fifo|   dispacher_2|       pointer|
+|dispacher_3_din             |  out|  2048|     ap_fifo|   dispacher_3|       pointer|
+|dispacher_3_full_n          |   in|     1|     ap_fifo|   dispacher_3|       pointer|
+|dispacher_3_write           |  out|     1|     ap_fifo|   dispacher_3|       pointer|
+|dispacher_3_num_data_valid  |   in|    32|     ap_fifo|   dispacher_3|       pointer|
+|dispacher_3_fifo_cap        |   in|    32|     ap_fifo|   dispacher_3|       pointer|
++----------------------------+-----+------+------------+--------------+--------------+
+

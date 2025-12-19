@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'Bias_Merger_Pipeline_VITIS_LOOP_14_1'
+================================================================
+* Date:           Fri Dec 19 23:44:31 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.470 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |      901|      901|  4.505 us|  4.505 us|  897|  897|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_14_1  |      899|      899|         5|          1|          1|   896|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       50|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      0|      160|      784|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       71|     -|
+|Register             |        -|      -|      102|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      262|      905|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------+------------------------------+---------+----+----+-----+-----+
+    |              Instance              |            Module            | BRAM_18K| DSP| FF | LUT | URAM|
+    +------------------------------------+------------------------------+---------+----+----+-----+-----+
+    |hadd_16ns_16ns_16_3_no_dsp_1_U2560  |hadd_16ns_16ns_16_3_no_dsp_1  |        0|   0|  40|  196|    0|
+    |hadd_16ns_16ns_16_3_no_dsp_1_U2561  |hadd_16ns_16ns_16_3_no_dsp_1  |        0|   0|  40|  196|    0|
+    |hadd_16ns_16ns_16_3_no_dsp_1_U2562  |hadd_16ns_16ns_16_3_no_dsp_1  |        0|   0|  40|  196|    0|
+    |hadd_16ns_16ns_16_3_no_dsp_1_U2563  |hadd_16ns_16ns_16_3_no_dsp_1  |        0|   0|  40|  196|    0|
+    +------------------------------------+------------------------------+---------+----+----+-----+-----+
+    |Total                               |                              |        0|   0| 160|  784|    0|
+    +------------------------------------+------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln14_fu_139_p2                     |         +|   0|  0|  29|          29|           1|
+    |icmp_ln14_fu_133_p2                    |      icmp|   0|  0|  15|          30|          30|
+    |ap_block_pp0_stage0_01001_grp1         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  50|          62|          35|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                 |   1|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1     |   1|          2|    1|          2|
+    |ap_sig_allocacmp_i_load     |  32|          2|   29|         58|
+    |dequantized_output_0_blk_n  |   1|          2|    1|          2|
+    |dequantized_output_1_blk_n  |   1|          2|    1|          2|
+    |dequantized_output_2_blk_n  |   1|          2|    1|          2|
+    |dequantized_output_3_blk_n  |   1|          2|    1|          2|
+    |i_fu_58                     |  32|          2|   29|         58|
+    |out_stream_blk_n            |   1|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  71|         18|   65|        130|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg   |   1|   0|    1|          0|
+    |dequantized_output_0_read_reg_258  |  16|   0|   16|          0|
+    |dequantized_output_1_read_reg_263  |  16|   0|   16|          0|
+    |dequantized_output_2_read_reg_268  |  16|   0|   16|          0|
+    |dequantized_output_3_read_reg_273  |  16|   0|   16|          0|
+    |i_fu_58                            |  29|   0|   29|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 102|   0|  102|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++-------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  Bias_Merger_Pipeline_VITIS_LOOP_14_1|  return value|
+|dequantized_output_0_dout            |   in|   16|     ap_fifo|                  dequantized_output_0|       pointer|
+|dequantized_output_0_empty_n         |   in|    1|     ap_fifo|                  dequantized_output_0|       pointer|
+|dequantized_output_0_read            |  out|    1|     ap_fifo|                  dequantized_output_0|       pointer|
+|dequantized_output_0_num_data_valid  |   in|    3|     ap_fifo|                  dequantized_output_0|       pointer|
+|dequantized_output_0_fifo_cap        |   in|    3|     ap_fifo|                  dequantized_output_0|       pointer|
+|dequantized_output_1_dout            |   in|   16|     ap_fifo|                  dequantized_output_1|       pointer|
+|dequantized_output_1_empty_n         |   in|    1|     ap_fifo|                  dequantized_output_1|       pointer|
+|dequantized_output_1_read            |  out|    1|     ap_fifo|                  dequantized_output_1|       pointer|
+|dequantized_output_1_num_data_valid  |   in|    3|     ap_fifo|                  dequantized_output_1|       pointer|
+|dequantized_output_1_fifo_cap        |   in|    3|     ap_fifo|                  dequantized_output_1|       pointer|
+|dequantized_output_2_dout            |   in|   16|     ap_fifo|                  dequantized_output_2|       pointer|
+|dequantized_output_2_empty_n         |   in|    1|     ap_fifo|                  dequantized_output_2|       pointer|
+|dequantized_output_2_read            |  out|    1|     ap_fifo|                  dequantized_output_2|       pointer|
+|dequantized_output_2_num_data_valid  |   in|    3|     ap_fifo|                  dequantized_output_2|       pointer|
+|dequantized_output_2_fifo_cap        |   in|    3|     ap_fifo|                  dequantized_output_2|       pointer|
+|dequantized_output_3_dout            |   in|   16|     ap_fifo|                  dequantized_output_3|       pointer|
+|dequantized_output_3_empty_n         |   in|    1|     ap_fifo|                  dequantized_output_3|       pointer|
+|dequantized_output_3_read            |  out|    1|     ap_fifo|                  dequantized_output_3|       pointer|
+|dequantized_output_3_num_data_valid  |   in|    3|     ap_fifo|                  dequantized_output_3|       pointer|
+|dequantized_output_3_fifo_cap        |   in|    3|     ap_fifo|                  dequantized_output_3|       pointer|
+|out_stream_din                       |  out|   64|     ap_fifo|                            out_stream|       pointer|
+|out_stream_full_n                    |   in|    1|     ap_fifo|                            out_stream|       pointer|
+|out_stream_write                     |  out|    1|     ap_fifo|                            out_stream|       pointer|
+|rows_2                               |   in|   30|     ap_none|                                rows_2|        scalar|
+|bias                                 |   in|   16|     ap_none|                                  bias|        scalar|
++-------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+

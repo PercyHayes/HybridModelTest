@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vitis HLS Report for 'Scale_Loader_Distributor'
+================================================================
+* Date:           Fri Dec 19 23:43:50 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.768 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    31364|    31364|  0.157 ms|  0.157 ms|  31364|  31364|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |                                                            |                                                 |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
+        |                          Instance                          |                      Module                     |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+        |grp_Scale_Loader_Distributor_Pipeline_load_from_hbm_fu_100  |Scale_Loader_Distributor_Pipeline_load_from_hbm  |    31362|    31362|  0.157 ms|  0.157 ms|  31361|  31361|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-------+-------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       75|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|       26|      488|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|        3|     -|
+|Register             |        -|      -|      538|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      564|      566|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+----+-----+-----+
+    |                          Instance                          |                      Module                     | BRAM_18K| DSP| FF | LUT | URAM|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+----+-----+-----+
+    |grp_Scale_Loader_Distributor_Pipeline_load_from_hbm_fu_100  |Scale_Loader_Distributor_Pipeline_load_from_hbm  |        0|   0|  26|  488|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                       |                                                 |        0|   0|  26|  488|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |sub_ln61_1_fu_155_p2  |         -|   0|  0|  21|           1|          21|
+    |sub_ln61_fu_139_p2    |         -|   0|  0|  32|           1|          32|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    |Iterations_fu_171_p3  |    select|   0|  0|  20|           1|          21|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  75|           4|          75|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm        |   1|          4|    1|          4|
+    |ap_done          |   1|          2|    1|          2|
+    |scale_mem_blk_n  |   1|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |   3|          8|    3|          8|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                  | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |Iterations_reg_303                                                       |  21|   0|   21|          0|
+    |ap_CS_fsm                                                                |   3|   0|    3|          0|
+    |ap_done_reg                                                              |   1|   0|    1|          0|
+    |data_10_reg_363                                                          |  32|   0|   32|          0|
+    |data_11_reg_368                                                          |  32|   0|   32|          0|
+    |data_12_reg_373                                                          |  32|   0|   32|          0|
+    |data_13_reg_378                                                          |  32|   0|   32|          0|
+    |data_14_reg_383                                                          |  32|   0|   32|          0|
+    |data_1_reg_313                                                           |  32|   0|   32|          0|
+    |data_2_reg_318                                                           |  32|   0|   32|          0|
+    |data_3_reg_323                                                           |  32|   0|   32|          0|
+    |data_4_reg_328                                                           |  32|   0|   32|          0|
+    |data_5_reg_333                                                           |  32|   0|   32|          0|
+    |data_6_reg_338                                                           |  32|   0|   32|          0|
+    |data_7_reg_343                                                           |  32|   0|   32|          0|
+    |data_8_reg_348                                                           |  32|   0|   32|          0|
+    |data_9_reg_353                                                           |  32|   0|   32|          0|
+    |data_s_reg_358                                                           |  32|   0|   32|          0|
+    |grp_Scale_Loader_Distributor_Pipeline_load_from_hbm_fu_100_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln35_reg_308                                                       |  32|   0|   32|          0|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                    | 538|   0|  538|          0|
+    +-------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor|  return value|
+|p_read                            |   in|   32|     ap_none|                    p_read|        scalar|
+|scale_mem_dout                    |   in|  512|     ap_fifo|                 scale_mem|       pointer|
+|scale_mem_empty_n                 |   in|    1|     ap_fifo|                 scale_mem|       pointer|
+|scale_mem_read                    |  out|    1|     ap_fifo|                 scale_mem|       pointer|
+|scale_mem_num_data_valid          |   in|    3|     ap_fifo|                 scale_mem|       pointer|
+|scale_mem_fifo_cap                |   in|    3|     ap_fifo|                 scale_mem|       pointer|
+|scale_dispacher_0_din             |  out|   32|     ap_fifo|         scale_dispacher_0|       pointer|
+|scale_dispacher_0_full_n          |   in|    1|     ap_fifo|         scale_dispacher_0|       pointer|
+|scale_dispacher_0_write           |  out|    1|     ap_fifo|         scale_dispacher_0|       pointer|
+|scale_dispacher_0_num_data_valid  |   in|    3|     ap_fifo|         scale_dispacher_0|       pointer|
+|scale_dispacher_0_fifo_cap        |   in|    3|     ap_fifo|         scale_dispacher_0|       pointer|
+|scale_dispacher_1_din             |  out|   32|     ap_fifo|         scale_dispacher_1|       pointer|
+|scale_dispacher_1_full_n          |   in|    1|     ap_fifo|         scale_dispacher_1|       pointer|
+|scale_dispacher_1_write           |  out|    1|     ap_fifo|         scale_dispacher_1|       pointer|
+|scale_dispacher_1_num_data_valid  |   in|    3|     ap_fifo|         scale_dispacher_1|       pointer|
+|scale_dispacher_1_fifo_cap        |   in|    3|     ap_fifo|         scale_dispacher_1|       pointer|
+|scale_dispacher_2_din             |  out|   32|     ap_fifo|         scale_dispacher_2|       pointer|
+|scale_dispacher_2_full_n          |   in|    1|     ap_fifo|         scale_dispacher_2|       pointer|
+|scale_dispacher_2_write           |  out|    1|     ap_fifo|         scale_dispacher_2|       pointer|
+|scale_dispacher_2_num_data_valid  |   in|    3|     ap_fifo|         scale_dispacher_2|       pointer|
+|scale_dispacher_2_fifo_cap        |   in|    3|     ap_fifo|         scale_dispacher_2|       pointer|
+|scale_dispacher_3_din             |  out|   32|     ap_fifo|         scale_dispacher_3|       pointer|
+|scale_dispacher_3_full_n          |   in|    1|     ap_fifo|         scale_dispacher_3|       pointer|
+|scale_dispacher_3_write           |  out|    1|     ap_fifo|         scale_dispacher_3|       pointer|
+|scale_dispacher_3_num_data_valid  |   in|    3|     ap_fifo|         scale_dispacher_3|       pointer|
+|scale_dispacher_3_fifo_cap        |   in|    3|     ap_fifo|         scale_dispacher_3|       pointer|
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+

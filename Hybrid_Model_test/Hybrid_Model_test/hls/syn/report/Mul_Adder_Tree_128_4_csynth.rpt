@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'Mul_Adder_Tree_128_4'
+================================================================
+* Date:           Fri Dec 19 23:44:10 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.649 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    25128|    25128|  0.126 ms|  0.126 ms|  25099|  25099|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+----------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |                                                 |                                              |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                     Instance                    |                    Module                    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +-------------------------------------------------+----------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |Mul_Adder_Tree_128_Loop_mul_proc_9_U0            |Mul_Adder_Tree_128_Loop_mul_proc_9            |    25098|    25098|  0.125 ms|  0.125 ms|  25098|  25098|       no|
+        |Mul_Adder_Tree_128_Loop_adder_128_64_proc_10_U0  |Mul_Adder_Tree_128_Loop_adder_128_64_proc_10  |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_64_32_proc_11_U0   |Mul_Adder_Tree_128_Loop_adder_64_32_proc_11   |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_32_16_proc_12_U0   |Mul_Adder_Tree_128_Loop_adder_32_16_proc_12   |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_16_8_proc_13_U0    |Mul_Adder_Tree_128_Loop_adder_16_8_proc_13    |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_8_4_proc_14_U0     |Mul_Adder_Tree_128_Loop_adder_8_4_proc_14     |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_4_2_proc_15_U0     |Mul_Adder_Tree_128_Loop_adder_4_2_proc_15     |    25095|    25095|  0.125 ms|  0.125 ms|  25095|  25095|       no|
+        |Mul_Adder_Tree_128_Loop_adder_2_1_proc_16_U0     |Mul_Adder_Tree_128_Loop_adder_2_1_proc_16     |    25097|    25097|  0.125 ms|  0.125 ms|  25097|  25097|       no|
+        +-------------------------------------------------+----------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        2|     -|
+|FIFO                 |        -|      -|     3245|      999|     -|
+|Instance             |        -|    128|    30396|    41843|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|        -|     -|
+|Register             |        -|      -|        -|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|    128|    33641|    42844|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      3|        1|        4|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      1|       ~0|        1|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+----------------------------------------------+---------+-----+-------+-------+-----+
+    |                     Instance                    |                    Module                    | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+-------+-------+-----+
+    |Mul_Adder_Tree_128_Loop_adder_128_64_proc_10_U0  |Mul_Adder_Tree_128_Loop_adder_128_64_proc_10  |        0|    0|   5756|  13756|    0|
+    |Mul_Adder_Tree_128_Loop_adder_16_8_proc_13_U0    |Mul_Adder_Tree_128_Loop_adder_16_8_proc_13    |        0|    0|    772|   1884|    0|
+    |Mul_Adder_Tree_128_Loop_adder_2_1_proc_16_U0     |Mul_Adder_Tree_128_Loop_adder_2_1_proc_16     |        0|    0|    297|   1618|    0|
+    |Mul_Adder_Tree_128_Loop_adder_32_16_proc_12_U0   |Mul_Adder_Tree_128_Loop_adder_32_16_proc_12   |        0|    0|   1484|   3580|    0|
+    |Mul_Adder_Tree_128_Loop_adder_4_2_proc_15_U0     |Mul_Adder_Tree_128_Loop_adder_4_2_proc_15     |        0|    0|    204|    580|    0|
+    |Mul_Adder_Tree_128_Loop_adder_64_32_proc_11_U0   |Mul_Adder_Tree_128_Loop_adder_64_32_proc_11   |        0|    0|   2908|   6972|    0|
+    |Mul_Adder_Tree_128_Loop_adder_8_4_proc_14_U0     |Mul_Adder_Tree_128_Loop_adder_8_4_proc_14     |        0|    0|    348|    972|    0|
+    |Mul_Adder_Tree_128_Loop_mul_proc_9_U0            |Mul_Adder_Tree_128_Loop_mul_proc_9            |        0|  128|  18627|  12481|    0|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+-------+-------+-----+
+    |Total                                            |                                              |        0|  128|  30396|  41843|    0|
+    +-------------------------------------------------+----------------------------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------+---------+------+----+-----+------+------+---------+
+    |     Name     | BRAM_18K|  FF  | LUT| URAM| Depth| Bits | Size:D*B|
+    +--------------+---------+------+----+-----+------+------+---------+
+    |mul_loc_c1_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c2_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c3_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c4_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c5_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c6_U  |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c_U   |        0|    70|   0|    -|     2|    32|       64|
+    |pass_128_i_U  |        0|   487|   0|    -|     2|  2048|     4096|
+    |pass_16_i_U   |        0|   517|   0|    -|     2|   256|      512|
+    |pass_2_i_U    |        0|    70|   0|    -|     2|    32|       64|
+    |pass_32_i_U   |        0|  1029|   0|    -|     2|   512|     1024|
+    |pass_4_i_U    |        0|   133|   0|    -|     2|    64|      128|
+    |pass_64_i_U   |        0|   258|   0|    -|     2|  1024|     2048|
+    |pass_8_i_U    |        0|   261|   0|    -|     2|   128|      256|
+    +--------------+---------+------+----+-----+------+------+---------+
+    |Total         |        0|  3245|   0|    0|    28|  4288|     8576|
+    +--------------+---------+------+----+-----+------+------+---------+
+
+    * Expression: 
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |ap_idle       |       and|   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+------+------------+----------------------+--------------+
+|              RTL Ports             | Dir | Bits |  Protocol  |     Source Object    |    C Type    |
++------------------------------------+-----+------+------------+----------------------+--------------+
+|mul_loc_dout                        |   in|    32|     ap_fifo|               mul_loc|       pointer|
+|mul_loc_empty_n                     |   in|     1|     ap_fifo|               mul_loc|       pointer|
+|mul_loc_read                        |  out|     1|     ap_fifo|               mul_loc|       pointer|
+|dispacher_1_dout                    |   in|  2048|     ap_fifo|           dispacher_1|       pointer|
+|dispacher_1_empty_n                 |   in|     1|     ap_fifo|           dispacher_1|       pointer|
+|dispacher_1_read                    |  out|     1|     ap_fifo|           dispacher_1|       pointer|
+|weight_streams_1_dout               |   in|   512|     ap_fifo|      weight_streams_1|       pointer|
+|weight_streams_1_empty_n            |   in|     1|     ap_fifo|      weight_streams_1|       pointer|
+|weight_streams_1_read               |  out|     1|     ap_fifo|      weight_streams_1|       pointer|
+|adder_tree_output_1_din             |  out|    32|     ap_fifo|   adder_tree_output_1|       pointer|
+|adder_tree_output_1_full_n          |   in|     1|     ap_fifo|   adder_tree_output_1|       pointer|
+|adder_tree_output_1_write           |  out|     1|     ap_fifo|   adder_tree_output_1|       pointer|
+|ap_clk                              |   in|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_rst                              |   in|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_start                            |   in|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|adder_tree_output_1_dout            |   in|    32|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|adder_tree_output_1_empty_n         |   in|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|adder_tree_output_1_read            |  out|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|adder_tree_output_1_num_data_valid  |   in|    32|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|adder_tree_output_1_fifo_cap        |   in|    32|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_done                             |  out|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_ready                            |  out|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_idle                             |  out|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
+|ap_continue                         |   in|     1|  ap_ctrl_hs|  Mul_Adder_Tree_128.4|  return value|
++------------------------------------+-----+------+------------+----------------------+--------------+
+

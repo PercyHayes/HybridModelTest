@@ -1,0 +1,573 @@
+  **** HLS Build v2025.1.1 6214317
+INFO: [HLS 200-2005] Using work_dir /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test'.
+WARNING: [HLS 200-655] The device family 'versalhbm-2MHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcv80-lsva4737-2MHP-e-S'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/common/params.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/common/params.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Mul_Adder_Tree_128.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Mul_Adder_Tree_128.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/weight_loader.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/weight_loader.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Mul_Adder_Tree_128.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Mul_Adder_Tree_128.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/weight_loader.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/weight_loader.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../src/testbench/Mul128Tb/tb_Mul_Adder_Tree_128.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file '/home/percy/data/HDL/HybridModelTest/src/testbench/Mul128Tb/tb_Mul_Adder_Tree_128.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=Mul_Adder_Tree_128' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcv80-lsva4737-2MHP-e-S' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2MHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1465] Applying config ini 'clock=200MHz' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/software/xilinx/2025.1.1/Vitis/lnx64/tools/vcxx/libexec//clang++"
+   Compiling apatb_Mul_Adder_Tree_128.cpp
+   Compiling apatb_Mul_Adder_Tree_128_util.cpp
+   Compiling Mul_Adder_Tree_128.cpp_pre.cpp.tb.cpp
+   Compiling tb_Mul_Adder_Tree_128.cpp_pre.cpp.tb.cpp
+   Compiling weight_loader.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Mul_Adder_Tree_128_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+--- Starting Testbench for Mul_Adder_Tree_128 ---
+Loading input data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/input_data.bin'...
+Successfully loaded 3584 input vectors.
+Loading packed weight data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/weight_data.bin'...
+Successfully loaded 3584 packed weight vectors.
+Loading reference output data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/output_data.bin'...
+Successfully loaded 3584 reference outputs.
+
+Calling HLS function Mul_Adder_Tree_128...
+HLS function execution finished.
+
+Verifying output against reference data...
+
+========== Test Summary ==========
+Total iterations: 3584
+✓ All outputs match the reference data!
+Maximum absolute error: 0.500000
+Average absolute error: 0.068870
+==================================
+
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 3584
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2025.1.1 (64-bit)
+  **** SW Build 6233196 on Thu Sep 11 21:27:11 MDT 2025
+  **** IP Build 6232796 on Fri Sep 12 01:46:16 MDT 2025
+  **** SharedData Build 6233195 on Thu Sep 11 17:56:43 MDT 2025
+  **** Start of session at: Tue Dec 16 21:12:33 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx/2025.1.1/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 16 21:12:38 2025...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2025.1.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /software/xilinx/2025.1.1/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_Mul_Adder_Tree_128_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj Mul_Adder_Tree_128.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./Mul_Adder_Tree_128_subsystem -s Mul_Adder_Tree_128 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_Mul_Adder_Tree_128_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mul_Adder_Tree_128_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Mul_Adder_Tree_128_subsystem/Mul_Adder_Tree_128_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_viv_comp
+Compiling package xbip_utils_v3_0_14.xbip_utils_v3_0_14_pkg
+Compiling package axi_utils_v2_0_10.axi_utils_v2_0_10_pkg
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_exp_table...
+Compiling package mult_gen_v12_0_23.mult_gen_v12_0_23_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_pkg
+Compiling package floating_point_v7_1_20.flt_utils
+Compiling package floating_point_v7_1_20.vt2mutils
+Compiling package floating_point_v7_1_20.vt2mcomps
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv_comp
+Compiling package mult_gen_v12_0_23.dsp_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.Mul_Adder_Tree_128_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=32,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.norm_zero_det [\norm_zero_det(data_width=7,norm...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="virtexupl...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="virtexupl...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [delay_default]
+Compiling architecture rtl of entity floating_point_v7_1_20.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=32)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=32,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=25,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_20.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="vir...]
+Compiling architecture struct of entity floating_point_v7_1_20.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture mul_adder_tree_128_sitofp_32s_32_3_no_dsp_1_ip_arch of entity xil_defaultlib.Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip [mul_adder_tree_128_sitofp_32s_32...]
+Compiling module xil_defaultlib.Mul_Adder_Tree_128_sitofp_32s_32...
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=16,r_ew...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="vir...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture mul_adder_tree_128_sptohp_32ns_16_1_no_dsp_1_ip_arch of entity xil_defaultlib.Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip [mul_adder_tree_128_sptohp_32ns_1...]
+Compiling module xil_defaultlib.Mul_Adder_Tree_128_sptohp_32ns_1...
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.zero_det_sel [\zero_det_sel(c_xdevicefamily="v...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=12,resu...]
+Compiling architecture rtl of entity floating_point_v7_1_20.alignment [\alignment(c_xdevicefamily="virt...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.addsub_logic [\addsub_logic(c_xdevicefamily="v...]
+Compiling architecture rtl of entity floating_point_v7_1_20.addsub [\addsub(c_xdevicefamily="virtexu...]
+Compiling architecture rtl of entity floating_point_v7_1_20.align_add [\align_add(c_xdevicefamily="virt...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="virtexupl...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=14,resu...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_gt [\compare_gt(c_xdevicefamily="vir...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare [\compare(c_xdevicefamily="virtex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_exp [\flt_add_exp(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="vir...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add [\flt_add(c_xdevicefamily="virtex...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture mul_adder_tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip_arch of entity xil_defaultlib.Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip [mul_adder_tree_128_hadd_16ns_16n...]
+Compiling module xil_defaultlib.Mul_Adder_Tree_128_hadd_16ns_16n...
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,length=0,fast_in...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(acascreg=0,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.op_resize [\op_resize(ai_width=11,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.dsp [\dsp(c_xdevicefamily="virtexuplu...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.mult_gen_v12_0_23_viv [\mult_gen_v12_0_23_viv(c_verbosi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fix_mult_xx [\fix_mult_xx(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fix_mult [\fix_mult(c_xdevicefamily="virte...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="v...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult [\flt_mult(c_xdevicefamily="virte...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture mul_adder_tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip_arch of entity xil_defaultlib.Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip [mul_adder_tree_128_hmul_16ns_16n...]
+Compiling module xil_defaultlib.Mul_Adder_Tree_128_hmul_16ns_16n...
+Compiling module xil_defaultlib.Mul_Adder_Tree_128_flow_control_...
+Compiling module xil_defaultlib.Mul_Adder_Tree_128
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=2048)
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=512)
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=16)
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_Mul_Adder_Tree_128_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mul_Adder_Tree_128
+
+****** xsim v2025.1.1 (64-bit)
+  **** SW Build 6233196 on Thu Sep 11 21:27:11 MDT 2025
+  **** IP Build 6232796 on Fri Sep 12 01:46:16 MDT 2025
+  **** SharedData Build 6233195 on Thu Sep 11 17:56:43 MDT 2025
+  **** Start of session at: Tue Dec 16 21:14:01 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/Mul_Adder_Tree_128/xsim_script.tcl
+# xsim {Mul_Adder_Tree_128} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=Mul_Adder_Tree_128_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {Mul_Adder_Tree_128.tcl}
+Time resolution is 1 ps
+source Mul_Adder_Tree_128.tcl
+## run all
+UVM_INFO /software/xilinx/2025.1.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /software/xilinx/2025.1.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO /software/xilinx/2025.1.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------------------------------------------------------------
+Name                                                        Type                                       Size  Value           
+-----------------------------------------------------------------------------------------------------------------------------
+uvm_test_top                                                Mul_Adder_Tree_128_test_lib                -     @360            
+  top_env                                                   Mul_Adder_Tree_128_env                     -     @371            
+    Mul_Adder_Tree_128_virtual_sqr                          Mul_Adder_Tree_128_virtual_sequencer       -     @499            
+      rsp_export                                            uvm_analysis_export                        -     @508            
+      seq_item_export                                       uvm_seq_item_pull_imp                      -     @626            
+      arbitration_queue                                     array                                      0     -               
+      lock_queue                                            array                                      0     -               
+      num_last_reqs                                         integral                                   32    'd1             
+      num_last_rsps                                         integral                                   32    'd1             
+    env_master_svr_Iterations                               uvm_env                                    -     @427            
+      m_agt                                                 uvm_agent                                  -     @642            
+        drv                                                 uvm_driver #(REQ,RSP)                      -     @790            
+          rsp_port                                          uvm_analysis_port                          -     @809            
+          seq_item_port                                     uvm_seq_item_pull_port                     -     @799            
+        mon                                                 uvm_monitor                                -     @819            
+          item_collect_port                                 uvm_analysis_port                          -     @830            
+        sqr                                                 uvm_sequencer                              -     @653            
+          rsp_export                                        uvm_analysis_export                        -     @662            
+          seq_item_export                                   uvm_seq_item_pull_imp                      -     @780            
+          arbitration_queue                                 array                                      0     -               
+          lock_queue                                        array                                      0     -               
+          num_last_reqs                                     integral                                   32    'd1             
+          num_last_rsps                                     integral                                   32    'd1             
+    env_master_svr_data_stream                              uvm_env                                    -     @394            
+      m_agt                                                 uvm_agent                                  -     @848            
+        drv                                                 uvm_driver #(REQ,RSP)                      -     @996            
+          rsp_port                                          uvm_analysis_port                          -     @1015           
+          seq_item_port                                     uvm_seq_item_pull_port                     -     @1005           
+        mon                                                 uvm_monitor                                -     @1025           
+          item_collect_port                                 uvm_analysis_port                          -     @1036           
+        sqr                                                 uvm_sequencer                              -     @859            
+          rsp_export                                        uvm_analysis_export                        -     @868            
+          seq_item_export                                   uvm_seq_item_pull_imp                      -     @986            
+          arbitration_queue                                 array                                      0     -               
+          lock_queue                                        array                                      0     -               
+          num_last_reqs                                     integral                                   32    'd1             
+          num_last_rsps                                     integral                                   32    'd1             
+    env_master_svr_weight_stream                            uvm_env                                    -     @407            
+      m_agt                                                 uvm_agent                                  -     @1054           
+        drv                                                 uvm_driver #(REQ,RSP)                      -     @1202           
+          rsp_port                                          uvm_analysis_port                          -     @1221           
+          seq_item_port                                     uvm_seq_item_pull_port                     -     @1211           
+        mon                                                 uvm_monitor                                -     @1231           
+          item_collect_port                                 uvm_analysis_port                          -     @1242           
+        sqr                                                 uvm_sequencer                              -     @1065           
+          rsp_export                                        uvm_analysis_export                        -     @1074           
+          seq_item_export                                   uvm_seq_item_pull_imp                      -     @1192           
+          arbitration_queue                                 array                                      0     -               
+          lock_queue                                        array                                      0     -               
+          num_last_reqs                                     integral                                   32    'd1             
+          num_last_rsps                                     integral                                   32    'd1             
+    env_slave_svr_result_stream                             uvm_env                                    -     @417            
+      s_agt                                                 uvm_agent                                  -     @1260           
+        drv                                                 uvm_driver #(REQ,RSP)                      -     @1408           
+          rsp_port                                          uvm_analysis_port                          -     @1427           
+          seq_item_port                                     uvm_seq_item_pull_port                     -     @1417           
+        mon                                                 uvm_monitor                                -     @1437           
+          item_collect_port                                 uvm_analysis_port                          -     @1448           
+        sqr                                                 uvm_sequencer                              -     @1271           
+          rsp_export                                        uvm_analysis_export                        -     @1280           
+          seq_item_export                                   uvm_seq_item_pull_imp                      -     @1398           
+          arbitration_queue                                 array                                      0     -               
+          lock_queue                                        array                                      0     -               
+          num_last_reqs                                     integral                                   32    'd1             
+          num_last_rsps                                     integral                                   32    'd1             
+    refm                                                    Mul_Adder_Tree_128_reference_model         -     @437            
+      trans_num_idx                                         integral                                   32    'h0             
+    subsys_mon                                              Mul_Adder_Tree_128_subsystem_monitor       -     @450            
+      scbd                                                  Mul_Adder_Tree_128_scoreboard              -     @1470           
+        refm                                                Mul_Adder_Tree_128_reference_model         -     @437            
+          trans_num_idx                                     integral                                   32    'h0             
+        file_rd_TVOUT_transaction_size                      <unknown>                                  -     @1480           
+          TV_FILE                                           string                                     0     ""              
+          fp                                                integral                                   32    'hxxxxxxxx      
+          TV_FILE_num                                       integral                                   32    'h0             
+          HEX_read                                          integral                                   32    'h0             
+          DEC_read                                          integral                                   32    'h0             
+          is_binary                                         integral                                   32    'h0             
+          TV_FILE_COMPARE                                   string                                     0     ""              
+          fp_compare                                        integral                                   32    'hxxxxxxxx      
+        TVOUT_transaction_size_queue                        da(integral)                               0     -               
+        file_wr_port_result_stream_result_stream_din        <unknown>                                  -     @1481           
+          TV_FILE                                           string                                     0     ""              
+          fp                                                integral                                   32    'hxxxxxxxx      
+          file_open                                         integral                                   32    'h0             
+          write_file_done                                   integral                                   32    'h0             
+          write_section_done                                integral                                   32    'h0             
+          TRANSACTION_NUM                                   integral                                   32    'h0             
+          transaction_num_idx                               integral                                   32    'h0             
+          TRANSACTION_DEPTH                                 integral                                   32    'h0             
+          TRANSACTION_DEPTH_queue                           da(integral)                               0     -               
+          TRANSACTION_DEPTH_queue_for_depth_check           da(integral)                               0     -               
+          transaction_depth_idx                             integral                                   32    'h0             
+          ap_done_num_idx                                   integral                                   32    'h0             
+          is_binary                                         integral                                   32    'h0             
+        write_file_done_result_stream_result_stream_din     integral                                   32    'h0             
+        write_section_done_result_stream_result_stream_din  integral                                   32    'h0             
+      svr_master_Iterations_imp                             uvm_analysis_imp_svr_master_Iterations     -     @489            
+      svr_master_data_stream_imp                            uvm_analysis_imp_svr_master_data_stream    -     @459            
+      svr_master_weight_stream_imp                          uvm_analysis_imp_svr_master_weight_stream  -     @469            
+      svr_slave_result_stream_imp                           uvm_analysis_imp_svr_slave_result_stream   -     @479            
+    env_master_svr_data_stream                              uvm_env                                    -     @394            
+    env_master_svr_weight_stream                            uvm_env                                    -     @407            
+    env_slave_svr_result_stream                             uvm_env                                    -     @417            
+    env_master_svr_Iterations                               uvm_env                                    -     @427            
+    refm                                                    Mul_Adder_Tree_128_reference_model         -     @437            
+    Mul_Adder_Tree_128_virtual_sqr                          Mul_Adder_Tree_128_virtual_sequencer       -     @499            
+    Mul_Adder_Tree_128_cfg                                  Mul_Adder_Tree_128_config                  -     @385            
+      port_data_stream_cfg                                  svr_config                                 -     @386            
+        svr_type                                            svr_inst_type                              32    SVR_MASTER      
+        prt_type                                            svr_protocol_type                          32    AP_FIFO         
+        is_active                                           svr_active_passive_enum                    1     SVR_ACTIVE      
+        reset_level                                         svr_reset_level_enum                       1     RESET_LEVEL_HIGH
+        spec_cfg                                            svr_spec_cfg_enum                          32    NORMAL          
+        clatency                                            svr_latency                                -     @387            
+          transfer_latency                                  integral                                   32    'h0             
+      port_weight_stream_cfg                                svr_config                                 -     @388            
+        svr_type                                            svr_inst_type                              32    SVR_MASTER      
+        prt_type                                            svr_protocol_type                          32    AP_FIFO         
+        is_active                                           svr_active_passive_enum                    1     SVR_ACTIVE      
+        reset_level                                         svr_reset_level_enum                       1     RESET_LEVEL_HIGH
+        spec_cfg                                            svr_spec_cfg_enum                          32    NORMAL          
+        clatency                                            svr_latency                                -     @389            
+          transfer_latency                                  integral                                   32    'h0             
+      port_result_stream_cfg                                svr_config                                 -     @390            
+        svr_type                                            svr_inst_type                              32    SVR_SLAVE       
+        prt_type                                            svr_protocol_type                          32    AP_FIFO         
+        is_active                                           svr_active_passive_enum                    1     SVR_ACTIVE      
+        reset_level                                         svr_reset_level_enum                       1     RESET_LEVEL_HIGH
+        spec_cfg                                            svr_spec_cfg_enum                          32    NORMAL          
+        clatency                                            svr_latency                                -     @391            
+          transfer_latency                                  integral                                   32    'h0             
+      port_Iterations_cfg                                   svr_config                                 -     @392            
+        svr_type                                            svr_inst_type                              32    SVR_MASTER      
+        prt_type                                            svr_protocol_type                          32    AP_NONE         
+        is_active                                           svr_active_passive_enum                    1     SVR_ACTIVE      
+        reset_level                                         svr_reset_level_enum                       1     RESET_LEVEL_HIGH
+        spec_cfg                                            svr_spec_cfg_enum                          32    NORMAL          
+        clatency                                            svr_latency                                -     @393            
+          transfer_latency                                  integral                                   32    'h0             
+      check_ena                                             integral                                   32    'h0             
+      cover_ena                                             integral                                   32    'h0             
+-----------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /software/xilinx/2025.1.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "113000"
+// RTL Simulation : 1 / 1 [100.00%] @ "20003000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 20037500 ps : File "/software/xilinx/2025.1.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00.1 ; elapsed = 00:04:10 . Memory (MB): peak = 1364.770 ; gain = 0.000 ; free physical = 11899 ; free virtual = 23189
+## quit
+INFO: xsimkernel Simulation Memory Usage: 557132 KB (Peak: 578620 KB), Simulation CPU Usage: 251090 ms
+INFO: [Common 17-206] Exiting xsim at Tue Dec 16 21:18:14 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+--- Starting Testbench for Mul_Adder_Tree_128 ---
+Loading input data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/input_data.bin'...
+Successfully loaded 3584 input vectors.
+Loading packed weight data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/weight_data.bin'...
+Successfully loaded 3584 packed weight vectors.
+Loading reference output data from '/home/percy/data/HDL/HybridModelTest/alg/Mul128Data/output_data.bin'...
+Successfully loaded 3584 reference outputs.
+
+Calling HLS function Mul_Adder_Tree_128...
+HLS function execution finished.
+
+Verifying output against reference data...
+
+========== Test Summary ==========
+Total iterations: 3584
+✓ All outputs match the reference data!
+Maximum absolute error: 0.500000
+Average absolute error: 0.068870
+==================================
+
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 3584
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total CPU user time: 492.84 seconds. Total CPU system time: 11.05 seconds. Total elapsed time: 363.38 seconds; peak allocated memory: 739.836 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 6m 7s

@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vitis HLS Report for 'Scale_Loader_Distributor_Pipeline_load_from_hbm'
+================================================================
+* Date:           Fri Dec 19 23:43:50 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.651 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   |  min  |  max  |                      Type                      |
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+    |    31362|    31362|  0.157 ms|  0.157 ms|  31361|  31361|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-------+-------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- load_from_hbm  |    31360|    31360|         5|          5|          8|  6272|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       32|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      456|     -|
+|Register             |        -|      -|       26|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|       26|      488|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln24_fu_236_p2                |         +|   0|  0|  20|          20|           1|
+    |icmp_ln24_fu_230_p2               |      icmp|   0|  0|  10|          21|          21|
+    |ap_block_state2_pp0_stage1_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  32|          42|          23|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |   3|          6|    1|          6|
+    |ap_done_int                  |   1|          2|    1|          2|
+    |ap_sig_allocacmp_iter_load   |  32|          2|   20|         40|
+    |iter_fu_84                   |  32|          2|   20|         40|
+    |scale_dispacher_0_blk_n      |   1|          2|    1|          2|
+    |scale_dispacher_0_din_local  |  96|          5|   32|        160|
+    |scale_dispacher_1_blk_n      |   1|          2|    1|          2|
+    |scale_dispacher_1_din_local  |  96|          5|   32|        160|
+    |scale_dispacher_2_blk_n      |   1|          2|    1|          2|
+    |scale_dispacher_2_din_local  |  96|          5|   32|        160|
+    |scale_dispacher_3_blk_n      |   1|          2|    1|          2|
+    |scale_dispacher_3_din_local  |  96|          5|   32|        160|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 456|         40|  174|        736|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+----+----+-----+-----------+
+    |     Name    | FF | LUT| Bits| Const Bits|
+    +-------------+----+----+-----+-----------+
+    |ap_CS_fsm    |   5|   0|    5|          0|
+    |ap_done_reg  |   1|   0|    1|          0|
+    |iter_fu_84   |  20|   0|   20|          0|
+    +-------------+----+----+-----+-----------+
+    |Total        |  26|   0|   26|          0|
+    +-------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++----------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  Scale_Loader_Distributor_Pipeline_load_from_hbm|  return value|
+|scale_dispacher_0_din             |  out|   32|     ap_fifo|                                scale_dispacher_0|       pointer|
+|scale_dispacher_0_full_n          |   in|    1|     ap_fifo|                                scale_dispacher_0|       pointer|
+|scale_dispacher_0_write           |  out|    1|     ap_fifo|                                scale_dispacher_0|       pointer|
+|scale_dispacher_0_num_data_valid  |   in|    3|     ap_fifo|                                scale_dispacher_0|       pointer|
+|scale_dispacher_0_fifo_cap        |   in|    3|     ap_fifo|                                scale_dispacher_0|       pointer|
+|scale_dispacher_1_din             |  out|   32|     ap_fifo|                                scale_dispacher_1|       pointer|
+|scale_dispacher_1_full_n          |   in|    1|     ap_fifo|                                scale_dispacher_1|       pointer|
+|scale_dispacher_1_write           |  out|    1|     ap_fifo|                                scale_dispacher_1|       pointer|
+|scale_dispacher_1_num_data_valid  |   in|    3|     ap_fifo|                                scale_dispacher_1|       pointer|
+|scale_dispacher_1_fifo_cap        |   in|    3|     ap_fifo|                                scale_dispacher_1|       pointer|
+|scale_dispacher_2_din             |  out|   32|     ap_fifo|                                scale_dispacher_2|       pointer|
+|scale_dispacher_2_full_n          |   in|    1|     ap_fifo|                                scale_dispacher_2|       pointer|
+|scale_dispacher_2_write           |  out|    1|     ap_fifo|                                scale_dispacher_2|       pointer|
+|scale_dispacher_2_num_data_valid  |   in|    3|     ap_fifo|                                scale_dispacher_2|       pointer|
+|scale_dispacher_2_fifo_cap        |   in|    3|     ap_fifo|                                scale_dispacher_2|       pointer|
+|scale_dispacher_3_din             |  out|   32|     ap_fifo|                                scale_dispacher_3|       pointer|
+|scale_dispacher_3_full_n          |   in|    1|     ap_fifo|                                scale_dispacher_3|       pointer|
+|scale_dispacher_3_write           |  out|    1|     ap_fifo|                                scale_dispacher_3|       pointer|
+|scale_dispacher_3_num_data_valid  |   in|    3|     ap_fifo|                                scale_dispacher_3|       pointer|
+|scale_dispacher_3_fifo_cap        |   in|    3|     ap_fifo|                                scale_dispacher_3|       pointer|
+|Iterations                        |   in|   21|     ap_none|                                       Iterations|        scalar|
+|empty                             |   in|   32|     ap_none|                                            empty|        scalar|
+|data_1                            |   in|   32|     ap_none|                                           data_1|        scalar|
+|data_2                            |   in|   32|     ap_none|                                           data_2|        scalar|
+|data_3                            |   in|   32|     ap_none|                                           data_3|        scalar|
+|data_4                            |   in|   32|     ap_none|                                           data_4|        scalar|
+|data_5                            |   in|   32|     ap_none|                                           data_5|        scalar|
+|data_6                            |   in|   32|     ap_none|                                           data_6|        scalar|
+|data_7                            |   in|   32|     ap_none|                                           data_7|        scalar|
+|data_8                            |   in|   32|     ap_none|                                           data_8|        scalar|
+|data_9                            |   in|   32|     ap_none|                                           data_9|        scalar|
+|data_15                           |   in|   32|     ap_none|                                          data_15|        scalar|
+|data_10                           |   in|   32|     ap_none|                                          data_10|        scalar|
+|data_11                           |   in|   32|     ap_none|                                          data_11|        scalar|
+|data_12                           |   in|   32|     ap_none|                                          data_12|        scalar|
+|data_13                           |   in|   32|     ap_none|                                          data_13|        scalar|
+|data_14                           |   in|   32|     ap_none|                                          data_14|        scalar|
++----------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+

@@ -1,0 +1,268 @@
+
+
+================================================================
+== Vitis HLS Report for 'Gemv_Test'
+================================================================
+* Date:           Fri Dec 19 23:44:31 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  5.962 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    33175|    33175|  0.198 ms|  0.198 ms|  33154|  33154|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+--------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |                             |                          |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+        |           Instance          |          Module          |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+        +-----------------------------+--------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |entry_proc_U0                |entry_proc                |        0|        0|      0 ns|      0 ns|      0|      0|        no|
+        |Block_entry_proc_U0          |Block_entry_proc          |        0|        0|      0 ns|      0 ns|      0|      0|        no|
+        |Weight_Loader_U0             |Weight_Loader             |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|        no|
+        |Weight_Loader_1_U0           |Weight_Loader_1           |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|        no|
+        |Weight_Loader_2_U0           |Weight_Loader_2           |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|        no|
+        |Weight_Loader_3_U0           |Weight_Loader_3           |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|        no|
+        |Scale_Loader_Distributor_U0  |Scale_Loader_Distributor  |    31364|    31364|  0.157 ms|  0.157 ms|  31364|  31364|        no|
+        |Stream_Copy_U0               |Stream_Copy               |    25092|    25092|  0.125 ms|  0.125 ms|  25092|  25092|        no|
+        |Mul_Adder_Tree_128_U0        |Mul_Adder_Tree_128        |    25128|    25128|  0.126 ms|  0.126 ms|  25099|  25099|  dataflow|
+        |Mul_Adder_Tree_128_4_U0      |Mul_Adder_Tree_128_4      |    25128|    25128|  0.126 ms|  0.126 ms|  25099|  25099|  dataflow|
+        |Mul_Adder_Tree_128_6_U0      |Mul_Adder_Tree_128_6      |    25128|    25128|  0.126 ms|  0.126 ms|  25099|  25099|  dataflow|
+        |Mul_Adder_Tree_128_8_U0      |Mul_Adder_Tree_128_8      |    25128|    25128|  0.126 ms|  0.126 ms|  25099|  25099|  dataflow|
+        |Accumulator_Quantizer_U0     |Accumulator_Quantizer     |    33153|    33153|  0.166 ms|  0.166 ms|  33153|  33153|        no|
+        |Accumulator_Quantizer_5_U0   |Accumulator_Quantizer_5   |    33153|    33153|  0.166 ms|  0.166 ms|  33153|  33153|        no|
+        |Accumulator_Quantizer_7_U0   |Accumulator_Quantizer_7   |    33153|    33153|  0.166 ms|  0.166 ms|  33153|  33153|        no|
+        |Accumulator_Quantizer_9_U0   |Accumulator_Quantizer_9   |    33153|    33153|  0.166 ms|  0.166 ms|  33153|  33153|        no|
+        |Bias_Merger_U0               |Bias_Merger               |      903|      903|  4.515 us|  4.515 us|    903|    903|        no|
+        +-----------------------------+--------------------------+---------+---------+----------+----------+-------+-------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       42|     -|
+|FIFO                 |        0|      -|    10166|     4124|     -|
+|Instance             |        -|    534|   139523|   179243|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|        8|     -|
+|Register             |        -|      -|        8|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|    534|   149697|   183417|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|     14|        8|       21|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      4|        2|        7|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------------------+---------+-----+-------+-------+-----+
+    |           Instance          |          Module          | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +-----------------------------+--------------------------+---------+-----+-------+-------+-----+
+    |Accumulator_Quantizer_U0     |Accumulator_Quantizer     |        0|    4|    344|   1208|    0|
+    |Accumulator_Quantizer_5_U0   |Accumulator_Quantizer_5   |        0|    4|    344|   1207|    0|
+    |Accumulator_Quantizer_7_U0   |Accumulator_Quantizer_7   |        0|    4|    344|   1207|    0|
+    |Accumulator_Quantizer_9_U0   |Accumulator_Quantizer_9   |        0|    4|    344|   1207|    0|
+    |Bias_Merger_U0               |Bias_Merger               |        0|    0|    329|   1000|    0|
+    |Block_entry_proc_U0          |Block_entry_proc          |        0|    4|    163|    214|    0|
+    |Mul_Adder_Tree_128_U0        |Mul_Adder_Tree_128        |        0|  128|  33641|  42844|    0|
+    |Mul_Adder_Tree_128_4_U0      |Mul_Adder_Tree_128_4      |        0|  128|  33641|  42844|    0|
+    |Mul_Adder_Tree_128_6_U0      |Mul_Adder_Tree_128_6      |        0|  128|  33641|  42844|    0|
+    |Mul_Adder_Tree_128_8_U0      |Mul_Adder_Tree_128_8      |        0|  128|  33641|  42844|    0|
+    |Scale_Loader_Distributor_U0  |Scale_Loader_Distributor  |        0|    0|    564|    566|    0|
+    |Stream_Copy_U0               |Stream_Copy               |        0|    2|    264|    504|    0|
+    |Weight_Loader_U0             |Weight_Loader             |        0|    0|    565|    186|    0|
+    |Weight_Loader_1_U0           |Weight_Loader_1           |        0|    0|    565|    186|    0|
+    |Weight_Loader_2_U0           |Weight_Loader_2           |        0|    0|    565|    186|    0|
+    |Weight_Loader_3_U0           |Weight_Loader_3           |        0|    0|    565|    186|    0|
+    |entry_proc_U0                |entry_proc                |        0|    0|      3|     10|    0|
+    +-----------------------------+--------------------------+---------+-----+-------+-------+-----+
+    |Total                        |                          |        0|  534| 139523| 179243|    0|
+    +-----------------------------+--------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+------+----+-----+------+------+---------+
+    |          Name          | BRAM_18K|  FF  | LUT| URAM| Depth| Bits | Size:D*B|
+    +------------------------+---------+------+----+-----+------+------+---------+
+    |adder_tree_output_1_U   |        0|    70|   0|    -|     2|    32|       64|
+    |adder_tree_output_2_U   |        0|    70|   0|    -|     2|    32|       64|
+    |adder_tree_output_3_U   |        0|    70|   0|    -|     2|    32|       64|
+    |adder_tree_output_U     |        0|    70|   0|    -|     2|    32|       64|
+    |bias_buffer_c_U         |        0|     9|   0|    -|     6|    16|       96|
+    |cols_c5_U               |        0|     7|   0|    -|     4|    32|      128|
+    |cols_c6_U               |        0|     7|   0|    -|     4|    32|      128|
+    |cols_c7_U               |        0|     7|   0|    -|     4|    32|      128|
+    |cols_c_U                |        0|     7|   0|    -|     4|    32|      128|
+    |dequantized_output_1_U  |        0|    38|   0|    -|     2|    16|       32|
+    |dequantized_output_2_U  |        0|    38|   0|    -|     2|    16|       32|
+    |dequantized_output_3_U  |        0|    38|   0|    -|     2|    16|       32|
+    |dequantized_output_U    |        0|    38|   0|    -|     2|    16|       32|
+    |dispacher_0_U           |        0|   487|   0|    -|     2|  2048|     4096|
+    |dispacher_1_U           |        0|   487|   0|    -|     2|  2048|     4096|
+    |dispacher_2_U           |        0|   487|   0|    -|     2|  2048|     4096|
+    |dispacher_3_U           |        0|   487|   0|    -|     2|  2048|     4096|
+    |mul_loc_c10_U           |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c11_channel_U   |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c12_channel_U   |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c13_channel_U   |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c14_channel_U   |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c15_channel_U   |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c8_U            |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c9_U            |        0|    70|   0|    -|     2|    32|       64|
+    |mul_loc_c_U             |        0|    70|   0|    -|     2|    32|       64|
+    |rows_c1_U               |        0|     7|   0|    -|     4|    32|      128|
+    |rows_c2_U               |        0|     7|   0|    -|     4|    32|      128|
+    |rows_c3_U               |        0|     7|   0|    -|     4|    32|      128|
+    |rows_c4_U               |        0|     7|   0|    -|     4|    32|      128|
+    |rows_c_U                |        0|    70|   0|    -|     2|    32|       64|
+    |scale_dispacher_1_U     |        0|    70|   0|    -|     2|    32|       64|
+    |scale_dispacher_2_U     |        0|    70|   0|    -|     2|    32|       64|
+    |scale_dispacher_3_U     |        0|    70|   0|    -|     2|    32|       64|
+    |scale_dispacher_U       |        0|    70|   0|    -|     2|    32|       64|
+    |scale_mem_c_U           |        0|   525|   0|    -|     3|   512|     1536|
+    |weight_mem0_c_U         |        0|   525|   0|    -|     3|   512|     1536|
+    |weight_mem1_c_U         |        0|   525|   0|    -|     3|   512|     1536|
+    |weight_mem2_c_U         |        0|   525|   0|    -|     3|   512|     1536|
+    |weight_mem3_c_U         |        0|   525|   0|    -|     3|   512|     1536|
+    |weight_streams_1_U      |        0|  1029|   0|    -|     2|   512|     1024|
+    |weight_streams_2_U      |        0|  1029|   0|    -|     2|   512|     1024|
+    |weight_streams_3_U      |        0|  1029|   0|    -|     2|   512|     1024|
+    |weight_streams_U        |        0|  1029|   0|    -|     2|   512|     1024|
+    +------------------------+---------+------+----+-----+------+------+---------+
+    |Total                   |        0| 10166|   0|    0|   113| 13712|    30560|
+    +------------------------+---------+------+----+-----+------+------+---------+
+
+    * Expression: 
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |Block_entry_proc_U0_ap_continue            |       and|   0|  0|   2|           1|           1|
+    |Block_entry_proc_U0_ap_start               |       and|   0|  0|   2|           1|           1|
+    |Block_entry_proc_U0_start_full_n           |       and|   0|  0|   2|           1|           1|
+    |Stream_Copy_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
+    |Stream_Copy_U0_start_full_n                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mul_loc_c11_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mul_loc_c12_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mul_loc_c13_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mul_loc_c14_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_mul_loc_c15_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                    |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                              |       and|   0|  0|   2|           1|           1|
+    |entry_proc_U0_ap_start                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_Block_entry_proc_U0_ap_ready       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_Stream_Copy_U0_ap_ready            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mul_loc_c11_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mul_loc_c12_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mul_loc_c13_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mul_loc_c14_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_mul_loc_c15_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_entry_proc_U0_ap_ready             |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                      |          |   0|  0|  42|          21|          21|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                     | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_Block_entry_proc_U0_ap_ready       |   1|          2|    1|          2|
+    |ap_sync_reg_Stream_Copy_U0_ap_ready            |   1|          2|    1|          2|
+    |ap_sync_reg_channel_write_mul_loc_c11_channel  |   1|          2|    1|          2|
+    |ap_sync_reg_channel_write_mul_loc_c12_channel  |   1|          2|    1|          2|
+    |ap_sync_reg_channel_write_mul_loc_c13_channel  |   1|          2|    1|          2|
+    |ap_sync_reg_channel_write_mul_loc_c14_channel  |   1|          2|    1|          2|
+    |ap_sync_reg_channel_write_mul_loc_c15_channel  |   1|          2|    1|          2|
+    |ap_sync_reg_entry_proc_U0_ap_ready             |   1|          2|    1|          2|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                          |   8|         16|    8|         16|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+---+----+-----+-----------+
+    |                      Name                     | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_Block_entry_proc_U0_ap_ready       |  1|   0|    1|          0|
+    |ap_sync_reg_Stream_Copy_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mul_loc_c11_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mul_loc_c12_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mul_loc_c13_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mul_loc_c14_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_mul_loc_c15_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_entry_proc_U0_ap_ready             |  1|   0|    1|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |Total                                          |  8|   0|    8|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------+-----+-----+------------+---------------+--------------+
+|weight_mem0        |   in|  512|     ap_none|    weight_mem0|       pointer|
+|weight_mem1        |   in|  512|     ap_none|    weight_mem1|       pointer|
+|weight_mem2        |   in|  512|     ap_none|    weight_mem2|       pointer|
+|weight_mem3        |   in|  512|     ap_none|    weight_mem3|       pointer|
+|scale_mem          |   in|  512|     ap_none|      scale_mem|       pointer|
+|out_stream_din     |  out|   64|     ap_fifo|     out_stream|       pointer|
+|out_stream_full_n  |   in|    1|     ap_fifo|     out_stream|       pointer|
+|out_stream_write   |  out|    1|     ap_fifo|     out_stream|       pointer|
+|input_buffer       |   in|   16|     ap_none|   input_buffer|       pointer|
+|bias_buffer        |   in|   16|     ap_none|    bias_buffer|       pointer|
+|output_buffer      |   in|   16|     ap_none|  output_buffer|       pointer|
+|rows               |   in|   32|     ap_none|           rows|        scalar|
+|cols               |   in|   32|     ap_none|           cols|        scalar|
+|weight_offset      |   in|   32|     ap_none|  weight_offset|        scalar|
+|scale_offset       |   in|   32|     ap_none|   scale_offset|        scalar|
+|bias_offset        |   in|   32|     ap_none|    bias_offset|        scalar|
+|ap_clk             |   in|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|      Gemv_Test|  return value|
++-------------------+-----+-----+------------+---------------+--------------+
+

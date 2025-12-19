@@ -1,0 +1,96 @@
+  **** HLS Build v2025.1.1 6214317
+INFO: [HLS 200-2005] Using work_dir /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test'.
+WARNING: [HLS 200-655] The device family 'versalhbm-2MHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcv80-lsva4737-2MHP-e-S'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/common/params.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/common/params.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/Mul_Adder_Tree_128.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/Mul_Adder_Tree_128.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/weight_loader.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/weight_loader.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Mul_Adder_Tree_128.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Mul_Adder_Tree_128.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/weight_loader.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/weight_loader.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../src/testbench/Mul128Tb/tb_Mul_Adder_Tree_128.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file '/home/percy/data/HDL/HybridModelTest/src/testbench/Mul128Tb/tb_Mul_Adder_Tree_128.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=Mul_Adder_Tree_128' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcv80-lsva4737-2MHP-e-S' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2MHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1465] Applying config ini 'clock=200MHz' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.35ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.tool=xsim' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/vitis-comp.json
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.1.1 (64-bit)
+  **** SW Build 6233196 on Thu Sep 11 21:27:11 MDT 2025
+  **** IP Build 6232796 on Fri Sep 12 01:46:16 MDT 2025
+  **** SharedData Build 6233195 on Thu Sep 11 17:56:43 MDT 2025
+  **** Start of session at: Mon Dec 15 23:28:55 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/hls_data.json outdir=/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip srcdir=/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/misc
+INFO: Copied 39 verilog file(s) to /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/verilog
+INFO: Copied 36 vhdl file(s) to /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/vhdl
+Generating 4 subcores in /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/subcore_prj:
+impl/misc/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip.tcl
+impl/misc/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip.tcl
+impl/misc/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip.tcl
+impl/misc/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/verilog
+INFO: Generating Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx/2025.1.1/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip'...
+INFO: Done generating Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip.tcl
+INFO: Generating Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip'...
+INFO: Done generating Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip.tcl
+INFO: Generating Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip'...
+INFO: Done generating Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip.tcl
+INFO: Generating Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip'...
+INFO: Done generating Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip via file impl/misc/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip.tcl
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+INFO: Copied 4 subcore files: /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/ip/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip/Mul_Adder_Tree_128_hmul_16ns_16ns_16_1_full_dsp_1_ip.xci /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/ip/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip/Mul_Adder_Tree_128_hadd_16ns_16ns_16_3_no_dsp_1_ip.xci /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/ip/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip/Mul_Adder_Tree_128_sitofp_32s_32_3_no_dsp_1_ip.xci /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/ip/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip/Mul_Adder_Tree_128_sptohp_32ns_16_1_no_dsp_1_ip.xci
+INFO: Import ports from HDL: /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/hdl/vhdl/Mul_Adder_Tree_128.vhd (Mul_Adder_Tree_128)
+INFO: Add ap_fifo interface data_stream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx/2025.1.1/data/ip'.
+INFO: Add ap_fifo interface weight_stream
+INFO: Add ap_fifo interface result_stream
+INFO: Add data interface Iterations
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/component.xml
+INFO: Created IP archive /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/impl/ip/xilinx_com_hls_Mul_Adder_Tree_128_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 15 23:29:03 2025...
+INFO: [HLS 200-802] Generated output file Hybrid_Model_test/Mul_Adder_Tree_128.zip
+INFO: [HLS 200-112] Total CPU user time: 15.1 seconds. Total CPU system time: 3.71 seconds. Total elapsed time: 26.94 seconds; peak allocated memory: 736.027 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 31s

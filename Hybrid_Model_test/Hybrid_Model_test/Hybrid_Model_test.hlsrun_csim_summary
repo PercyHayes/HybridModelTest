@@ -1,0 +1,174 @@
+<ENTRY>
+{
+ "thisFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/Hybrid_Model_test.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Dec 19 23:42:08 2025",
+ "timestampMillis": "1766158928046",
+ "buildStep": {
+  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "name": "vitis-run",
+  "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/logs/Hybrid_Model_test.steps.log",
+  "commandLine": "/software/xilinx/2025.1.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg --work_dir Hybrid_Model_test ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg",
+   "--work_dir",
+   "Hybrid_Model_test"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Dec 19 23:42:08 2025",
+ "timestampMillis": "1766158928046",
+ "status": {
+  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Dec 19 23:42:12 2025",
+ "timestampMillis": "1766158932442",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "Gemv_Test",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/percy/data/HDL/HybridModelTest/src/common/params.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Mul_Adder_Tree_128.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/weight_loader.h",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Mul_Adder_Tree_128.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/weight_loader.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/include/scale_loader_distributor.h",
+     "/home/percy/data/HDL/HybridModelTest/src/main/scale_loader_distributor.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Accumulator_Quantizer.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Bias_Merger.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Gemv_Test.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Scale_Loader_Distributor.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Stream_Copy.h",
+     "/home/percy/data/HDL/HybridModelTest/src/include/Weight_Loader.h",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Accumulator_Quantizer.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Bias_Merger.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Gemv_Test.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Scale_Loader_Distributor.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Stream_Copy.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/main/Weight_Loader.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Dec 19 23:42:12 2025",
+ "timestampMillis": "1766158932442",
+ "buildStep": {
+  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "name": "",
+  "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Dec 19 23:42:12 2025",
+ "timestampMillis": "1766158932443",
+ "status": {
+  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Dec 19 23:42:24 2025",
+ "timestampMillis": "1766158944067",
+ "status": {
+  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Dec 19 23:42:24 2025",
+ "timestampMillis": "1766158944327",
+ "status": {
+  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Dec 19 23:42:24 2025",
+ "timestampMillis": "1766158944328",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Dec 19 23:42:24 2025",
+ "timestampMillis": "1766158944328",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
