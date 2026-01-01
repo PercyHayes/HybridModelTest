@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_max_value_proc'
+================================================================
+* Date:           Sun Dec 21 23:34:17 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.733 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |    16405|    16405|  82.025 us|  82.025 us|  16405|  16405|       no|
+    +---------+---------+-----------+-----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |                                                         |                                              |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+        |                         Instance                        |                    Module                    |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |grp_Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1_fu_101  |Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1  |     4098|     4098|  20.490 us|  20.490 us|  4097|  4097|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- max_value  |    16404|    16404|      4101|          -|          -|     4|        no|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       10|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|       50|      153|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       16|     -|
+|Register             |        -|      -|       42|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|       92|      179|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------+----------------------------------------------+---------+----+----+-----+-----+
+    |                         Instance                        |                    Module                    | BRAM_18K| DSP| FF | LUT | URAM|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+----+-----+-----+
+    |grp_Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1_fu_101  |Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1  |        0|   0|  50|  153|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                    |                                              |        0|   0|  50|  153|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |head_6_fu_123_p2     |         +|   0|  0|   6|           3|           1|
+    |icmp_ln38_fu_129_p2  |      icmp|   0|  0|   2|           3|           4|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  10|           7|           6|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |   3|          5|    1|          5|
+    |ap_done                        |   1|          2|    1|          2|
+    |head_fu_72                     |   8|          2|    3|          6|
+    |in_stream_TREADY_int_regslice  |   1|          2|    1|          2|
+    |max_value_stream_blk_n         |   1|          2|    1|          2|
+    |real_start                     |   1|          2|    1|          2|
+    |seq_len_c1_blk_n               |   1|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  16|         17|    9|         21|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                 | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                             |   4|   0|    4|          0|
+    |ap_done_reg                                                           |   1|   0|    1|          0|
+    |grp_Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1_fu_101_ap_start_reg  |   1|   0|    1|          0|
+    |head_fu_72                                                            |   3|   0|    3|          0|
+    |seq_len_read_reg_173                                                  |  32|   0|   32|          0|
+    |start_once_reg                                                        |   1|   0|    1|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                 |  42|   0|   42|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+---------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|start_full_n                      |   in|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|start_out                         |  out|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|start_write                       |  out|    1|  ap_ctrl_hs|  Loop_max_value_proc|  return value|
+|seq_len                           |   in|   32|     ap_none|              seq_len|        scalar|
+|max_value_stream_din              |  out|   16|     ap_fifo|     max_value_stream|       pointer|
+|max_value_stream_full_n           |   in|    1|     ap_fifo|     max_value_stream|       pointer|
+|max_value_stream_write            |  out|    1|     ap_fifo|     max_value_stream|       pointer|
+|max_value_stream_num_data_valid   |   in|    8|     ap_fifo|     max_value_stream|       pointer|
+|max_value_stream_fifo_cap         |   in|    8|     ap_fifo|     max_value_stream|       pointer|
+|in_stream_TDATA                   |   in|   16|        axis|            in_stream|       pointer|
+|in_stream_TVALID                  |   in|    1|        axis|            in_stream|       pointer|
+|in_stream_TREADY                  |  out|    1|        axis|            in_stream|       pointer|
+|max_bypass_stream_din             |  out|   16|     ap_fifo|    max_bypass_stream|       pointer|
+|max_bypass_stream_full_n          |   in|    1|     ap_fifo|    max_bypass_stream|       pointer|
+|max_bypass_stream_write           |  out|    1|     ap_fifo|    max_bypass_stream|       pointer|
+|max_bypass_stream_num_data_valid  |   in|   15|     ap_fifo|    max_bypass_stream|       pointer|
+|max_bypass_stream_fifo_cap        |   in|   15|     ap_fifo|    max_bypass_stream|       pointer|
+|seq_len_c1_din                    |  out|   32|     ap_fifo|           seq_len_c1|       pointer|
+|seq_len_c1_full_n                 |   in|    1|     ap_fifo|           seq_len_c1|       pointer|
+|seq_len_c1_write                  |  out|    1|     ap_fifo|           seq_len_c1|       pointer|
+|seq_len_c1_num_data_valid         |   in|    3|     ap_fifo|           seq_len_c1|       pointer|
+|seq_len_c1_fifo_cap               |   in|    3|     ap_fifo|           seq_len_c1|       pointer|
++----------------------------------+-----+-----+------------+---------------------+--------------+
+

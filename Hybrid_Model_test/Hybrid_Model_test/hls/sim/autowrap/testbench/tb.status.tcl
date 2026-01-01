@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/./sim/autowrap/testbench/SoftMax.cpp_pre.cpp.tb.cpp

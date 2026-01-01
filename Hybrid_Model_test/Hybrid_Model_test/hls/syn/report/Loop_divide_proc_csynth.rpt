@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_divide_proc'
+================================================================
+* Date:           Sun Dec 21 23:34:18 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.608 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       11|       11|  55.000 ns|  55.000 ns|    4|    4|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- divide  |        9|        9|         7|          1|          1|     4|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       15|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       20|     -|
+|Register             |        -|      -|       16|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|       16|       35|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+------------------------------+---------+----+---+----+-----+
+    |             Instance             |            Module            | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------------------+------------------------------+---------+----+---+----+-----+
+    |hdiv_16ns_16ns_16_7_no_dsp_1_U46  |hdiv_16ns_16ns_16_7_no_dsp_1  |        0|   0|  0|   0|    0|
+    +----------------------------------+------------------------------+---------+----+---+----+-----+
+    |Total                             |                              |        0|   0|  0|   0|    0|
+    +----------------------------------+------------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |head_fu_76_p2                     |         +|   0|  0|   6|           2|           1|
+    |ap_condition_121                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln75_fu_97_p2                |      icmp|   0|  0|   1|           2|           2|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  15|           8|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   1|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter6_reg  |   1|          2|    1|          2|
+    |ap_sig_allocacmp_head1_load       |   8|          2|    2|          4|
+    |head1_fu_46                       |   8|          2|    2|          4|
+    |inv_sum_exp_stream_blk_n          |   1|          2|    1|          2|
+    |sum_exp_stream_blk_n              |   1|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  20|         12|    8|         16|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg  |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg  |  1|   0|    1|          0|
+    |head1_fu_46                       |  2|   0|    2|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 16|   0|   16|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|    Loop_divide_proc|  return value|
+|sum_exp_stream_dout                |   in|   16|     ap_fifo|      sum_exp_stream|       pointer|
+|sum_exp_stream_empty_n             |   in|    1|     ap_fifo|      sum_exp_stream|       pointer|
+|sum_exp_stream_read                |  out|    1|     ap_fifo|      sum_exp_stream|       pointer|
+|sum_exp_stream_num_data_valid      |   in|    8|     ap_fifo|      sum_exp_stream|       pointer|
+|sum_exp_stream_fifo_cap            |   in|    8|     ap_fifo|      sum_exp_stream|       pointer|
+|inv_sum_exp_stream_din             |  out|   16|     ap_fifo|  inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_full_n          |   in|    1|     ap_fifo|  inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_write           |  out|    1|     ap_fifo|  inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_num_data_valid  |   in|   32|     ap_fifo|  inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_fifo_cap        |   in|   32|     ap_fifo|  inv_sum_exp_stream|       pointer|
++-----------------------------------+-----+-----+------------+--------------------+--------------+
+

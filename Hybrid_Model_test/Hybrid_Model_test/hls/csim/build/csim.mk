@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../src/testbench/Gemv_Test/tb_Gemv_Test.cpp ../../../../../src/main/Weight_Loader.cpp ../../../../../src/main/Stream_Copy.cpp ../../../../../src/main/Scale_Loader_Distributor.cpp ../../../../../src/main/Gemv_Test.cpp ../../../../../src/main/Bias_Merger.cpp ../../../../../src/main/Accumulator_Quantizer.cpp ../../../../../src/main/Mul_Adder_Tree_128.cpp
+HLS_SOURCES = ../../../../../src/testbench/Softmax/tb_SoftMax.cpp ../../../../../src/main/SoftMax.cpp ../../../../../src/main/Weight_Loader.cpp ../../../../../src/main/Stream_Copy.cpp ../../../../../src/main/Scale_Loader_Distributor.cpp ../../../../../src/main/Gemv_Test.cpp ../../../../../src/main/Bias_Merger.cpp ../../../../../src/main/Accumulator_Quantizer.cpp ../../../../../src/main/Mul_Adder_Tree_128.cpp
 
 override TARGET := csim.exe
 
@@ -83,11 +83,17 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb_Gemv_Test.o: ../../../../../src/testbench/Gemv_Test/tb_Gemv_Test.cpp $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../../src/testbench/Gemv_Test/tb_Gemv_Test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/tb_SoftMax.o: ../../../../../src/testbench/Softmax/tb_SoftMax.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../src/testbench/Softmax/tb_SoftMax.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/tb_Gemv_Test.d
+-include $(ObjDir)/tb_SoftMax.d
+
+$(ObjDir)/SoftMax.o: ../../../../../src/main/SoftMax.cpp $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../../src/main/SoftMax.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/SoftMax.d
 
 $(ObjDir)/Weight_Loader.o: ../../../../../src/main/Weight_Loader.cpp $(ObjDir)/.dir csim.mk
 	$(Echo) "   Compiling ../../../../../src/main/Weight_Loader.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

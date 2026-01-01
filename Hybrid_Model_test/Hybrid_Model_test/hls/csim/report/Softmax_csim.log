@@ -1,0 +1,27 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../src/testbench/Softmax/tb_SoftMax.cpp in debug mode
+   Compiling ../../../../../src/main/SoftMax.cpp in debug mode
+   Compiling ../../../../../src/main/Weight_Loader.cpp in debug mode
+   Compiling ../../../../../src/main/Stream_Copy.cpp in debug mode
+   Compiling ../../../../../src/main/Scale_Loader_Distributor.cpp in debug mode
+   Compiling ../../../../../src/main/Gemv_Test.cpp in debug mode
+   Compiling ../../../../../src/main/Bias_Merger.cpp in debug mode
+   Compiling ../../../../../src/main/Accumulator_Quantizer.cpp in debug mode
+   Compiling ../../../../../src/main/Mul_Adder_Tree_128.cpp in debug mode
+   Generating csim.exe
+--- Starting Testbench for Softmax ---
+Loading input activation data...
+Loading reference output data...
+
+Calling HLS function Softmax...
+HLS function execution finished.
+
+Verifying output against reference data...
+All outputs match reference data within tolerance.
+Max absolute error: 4.76837e-07
+Average absolute error: 4.65079e-08
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

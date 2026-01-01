@@ -1,0 +1,408 @@
+Vivado Simulator v2025.1.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /software/xilinx/2025.1.1/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_Softmax_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj Softmax.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./Softmax_subsystem -s Softmax 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_softmax_output_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_softmax_output_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_start_for_Loop_sub_max_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_sub_max_proc_U0
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_sub_max_proc_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hsub_16ns_16ns_16_3_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hsub_16ns_16ns_16_3_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_divide_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_divide_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_sparsemux_7_2_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_sparsemux_7_2_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_start_for_Loop_softmax_output_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_softmax_output_proc_U0
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_softmax_output_proc_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_max_value_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_max_value_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hmul_16ns_16ns_16_1_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hmul_16ns_16ns_16_1_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_start_for_Loop_divide_proc_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_divide_proc_U0
+INFO: [VRFC 10-311] analyzing module Softmax_start_for_Loop_divide_proc_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_sub_max_proc_Pipeline_VITIS_LOOP_57_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_sub_max_proc_Pipeline_VITIS_LOOP_57_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hadd_16ns_16ns_16_3_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hadd_16ns_16ns_16_3_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_fifo_w16_d128_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w16_d128_S
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w16_d128_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_bitselect_1ns_54ns_6ns_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_bitselect_1ns_54ns_6ns_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_max_value_proc_Pipeline_VITIS_LOOP_41_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_Loop_sub_max_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_Loop_sub_max_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_fifo_w32_d3_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w32_d3_S
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w32_d3_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_bitselect_1ns_32ns_5ns_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_bitselect_1ns_32ns_5ns_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hdiv_16ns_16ns_16_7_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hdiv_16ns_16ns_16_7_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_fifo_w16_d16384_U.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w16_d16384_U
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w16_d16384_U_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_ctlz_32_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_ctlz_32_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hexp_16ns_16ns_16_3_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hexp_16ns_16ns_16_3_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hcmp_16ns_16ns_1_1_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hcmp_16ns_16ns_1_1_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w32_d2_S
+INFO: [VRFC 10-311] analyzing module Softmax_fifo_w32_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_CTRL_BUS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_CTRL_BUS_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_hptodp_16ns_64_1_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_hptodp_16ns_64_1_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_Softmax_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_sparsemux_7_2_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Softmax_sparsemux_7_2_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/axivip/axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/axivip/axi_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/Softmax_subsystem/Softmax_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hmul_16ns_16ns_16_1_full_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hmul_16ns_16ns_16_1_full_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hexp_16ns_16ns_16_3_full_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hexp_16ns_16ns_16_3_full_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hdiv_16ns_16ns_16_7_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hdiv_16ns_16ns_16_7_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hsub_16ns_16ns_16_3_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hsub_16ns_16ns_16_3_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hcmp_16ns_16ns_1_1_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hcmp_16ns_16ns_1_1_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hptodp_16ns_64_1_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hptodp_16ns_64_1_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/sim/verilog/ip/xil_defaultlib/Softmax_hadd_16ns_16ns_16_3_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Softmax_hadd_16ns_16ns_16_3_no_dsp_1_ip'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_viv_comp
+Compiling package xbip_utils_v3_0_14.xbip_utils_v3_0_14_pkg
+Compiling package axi_utils_v2_0_10.axi_utils_v2_0_10_pkg
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_exp_table...
+Compiling package mult_gen_v12_0_23.mult_gen_v12_0_23_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_pkg
+Compiling package floating_point_v7_1_20.flt_utils
+Compiling package unisim.vcomponents
+Compiling package xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv_comp
+Compiling package ieee.std_logic_unsigned
+Compiling package floating_point_v7_1_20.flt_exp_hp_table_pkg
+Compiling package mult_gen_v12_0_23.dsp_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.Softmax_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.Softmax_CTRL_BUS_s_axi
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq [\compare_eq(c_xdevicefamily="vir...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_gt [\compare_gt(c_xdevicefamily="vir...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.fp_cmp [\fp_cmp(c_xdevicefamily="virtexu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hcmp_16ns_16ns_1_1_no_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hcmp_16ns_16ns_1_1_no_dsp_1_ip [softmax_hcmp_16ns_16ns_1_1_no_ds...]
+Compiling module xil_defaultlib.Softmax_hcmp_16ns_16ns_1_1_no_ds...
+Compiling module xil_defaultlib.Softmax_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.Softmax_Loop_max_value_proc_Pipe...
+Compiling module xil_defaultlib.Softmax_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.Softmax_Loop_max_value_proc
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.zero_det_sel [\zero_det_sel(c_xdevicefamily="v...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=12,resu...]
+Compiling architecture rtl of entity floating_point_v7_1_20.alignment [\alignment(c_xdevicefamily="virt...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(fast_input=true)\]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.addsub_logic [\addsub_logic(c_xdevicefamily="v...]
+Compiling architecture rtl of entity floating_point_v7_1_20.addsub [\addsub(c_xdevicefamily="virtexu...]
+Compiling architecture rtl of entity floating_point_v7_1_20.align_add [\align_add(c_xdevicefamily="virt...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="virtexupl...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="virtexupl...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=14,resu...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [delay_default]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare [\compare(c_xdevicefamily="virtex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_exp [\flt_add_exp(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="vir...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add [\flt_add(c_xdevicefamily="virtex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hadd_16ns_16ns_16_3_no_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hadd_16ns_16ns_16_3_no_dsp_1_ip [softmax_hadd_16ns_16ns_16_3_no_d...]
+Compiling module xil_defaultlib.Softmax_hadd_16ns_16ns_16_3_no_d...
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add [\flt_add(c_xdevicefamily="virtex...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hsub_16ns_16ns_16_3_no_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hsub_16ns_16ns_16_3_no_dsp_1_ip [softmax_hsub_16ns_16ns_16_3_no_d...]
+Compiling module xil_defaultlib.Softmax_hsub_16ns_16ns_16_3_no_d...
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(a_w=16,a_fw=11,o...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(a_w=16,a_ew...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="vir...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hptodp_16ns_64_1_no_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hptodp_16ns_64_1_no_dsp_1_ip [softmax_hptodp_16ns_64_1_no_dsp_...]
+Compiling module xil_defaultlib.Softmax_hptodp_16ns_64_1_no_dsp_...
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=18,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,length=0,fast_in...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.op_resize [\op_resize(ai_width=14,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.dsp [\dsp(c_xdevicefamily="virtexuplu...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.mult_gen_v12_0_23_viv [\mult_gen_v12_0_23_viv(c_verbosi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,fast_input=true)...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_exp_hp [\flt_exp_hp(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hexp_16ns_16ns_16_3_full_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hexp_16ns_16ns_16_3_full_dsp_1_ip [softmax_hexp_16ns_16ns_16_3_full...]
+Compiling module xil_defaultlib.Softmax_hexp_16ns_16ns_16_3_full...
+Compiling module xil_defaultlib.Softmax_bitselect_1ns_54ns_6ns_1...
+Compiling module xil_defaultlib.Softmax_sparsemux_7_2_32_1_1(din...
+Compiling module xil_defaultlib.Softmax_sparsemux_7_2_1_1_1(sel_...
+Compiling module xil_defaultlib.Softmax_Loop_sub_max_proc_Pipeli...
+Compiling module xil_defaultlib.Softmax_ctlz_32_32_1_1(din_WIDTH...
+Compiling module xil_defaultlib.Softmax_bitselect_1ns_32ns_5ns_1...
+Compiling module xil_defaultlib.Softmax_Loop_sub_max_proc
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13)\]
+Compiling architecture virtex of entity floating_point_v7_1_20.flt_div_mant [\flt_div_mant(c_xdevicefamily="v...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=5,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=5)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=4,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=4,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=4,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_20.flt_div [\flt_div(c_xdevicefamily="virtex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hdiv_16ns_16ns_16_7_no_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hdiv_16ns_16ns_16_7_no_dsp_1_ip [softmax_hdiv_16ns_16ns_16_7_no_d...]
+Compiling module xil_defaultlib.Softmax_hdiv_16ns_16ns_16_7_no_d...
+Compiling module xil_defaultlib.Softmax_flow_control_loop_pipe
+Compiling module xil_defaultlib.Softmax_Loop_divide_proc
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,length=0,fast_in...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(acascreg=0,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.delay_line [\delay_line(c_xdevicefamily="vir...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.op_resize [\op_resize(ai_width=11,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.dsp [\dsp(c_xdevicefamily="virtexuplu...]
+Compiling architecture xilinx of entity mult_gen_v12_0_23.mult_gen_v12_0_23_viv [\mult_gen_v12_0_23_viv(c_verbosi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fix_mult_xx [\fix_mult_xx(c_xdevicefamily="vi...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fix_mult [\fix_mult(c_xdevicefamily="virte...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="v...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult [\flt_mult(c_xdevicefamily="virte...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture softmax_hmul_16ns_16ns_16_1_full_dsp_1_ip_arch of entity xil_defaultlib.Softmax_hmul_16ns_16ns_16_1_full_dsp_1_ip [softmax_hmul_16ns_16ns_16_1_full...]
+Compiling module xil_defaultlib.Softmax_hmul_16ns_16ns_16_1_full...
+Compiling module xil_defaultlib.Softmax_Loop_softmax_output_proc...
+Compiling module xil_defaultlib.Softmax_Loop_softmax_output_proc
+Compiling module xil_defaultlib.Softmax_fifo_w16_d128_S_ShiftReg
+Compiling module xil_defaultlib.Softmax_fifo_w16_d128_S_default
+Compiling module xil_defaultlib.Softmax_fifo_w16_d16384_U_ram(DE...
+Compiling module xil_defaultlib.Softmax_fifo_w16_d16384_U_defaul...
+Compiling module xil_defaultlib.Softmax_fifo_w32_d2_S_ShiftReg
+Compiling module xil_defaultlib.Softmax_fifo_w32_d2_S_default
+Compiling module xil_defaultlib.Softmax_fifo_w32_d3_S_ShiftReg
+Compiling module xil_defaultlib.Softmax_fifo_w32_d3_S_default
+Compiling module xil_defaultlib.Softmax_start_for_Loop_sub_max_p...
+Compiling module xil_defaultlib.Softmax_start_for_Loop_sub_max_p...
+Compiling module xil_defaultlib.Softmax_start_for_Loop_divide_pr...
+Compiling module xil_defaultlib.Softmax_start_for_Loop_divide_pr...
+Compiling module xil_defaultlib.Softmax_start_for_Loop_softmax_o...
+Compiling module xil_defaultlib.Softmax_start_for_Loop_softmax_o...
+Compiling module xil_defaultlib.Softmax
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=16)
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=5,STRB_WIDTH=4...
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(IN_CHA...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit_defaul...
+Compiling module xil_defaultlib.AESL_deadlock_detector_2
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.df_fifo_intf_default
+Compiling module xil_defaultlib.df_process_intf_default
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=4)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=6)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_Softmax_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Softmax

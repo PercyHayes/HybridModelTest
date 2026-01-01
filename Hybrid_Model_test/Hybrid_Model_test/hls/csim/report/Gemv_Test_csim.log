@@ -1,6 +1,7 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-make: 'csim.exe' is up to date.
+   Compiling ../../../../../src/testbench/Gemv_Test/tb_Gemv_Test.cpp in debug mode
+   Generating csim.exe
 --- Starting Testbench for Gemv_Test ---
 Loading weight data...
 Loading input activation data...

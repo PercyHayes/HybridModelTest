@@ -1,0 +1,13 @@
+--- Starting Testbench for Softmax ---
+Loading input activation data...
+Loading reference output data...
+
+Calling HLS function Softmax...
+HLS function execution finished.
+
+Verifying output against reference data...
+All outputs match reference data within tolerance.
+Max absolute error: 4.76837e-07
+Average absolute error: 4.65079e-08
+--- Testbench Finished ---
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384

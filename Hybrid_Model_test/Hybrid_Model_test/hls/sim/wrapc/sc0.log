@@ -1,0 +1,14 @@
+   Build using "/software/xilinx/2025.1.1/Vitis/lnx64/tools/vcxx/libexec//clang++"
+   Compiling Accumulator_Quantizer.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Softmax.cpp
+   Compiling apatb_Softmax_util.cpp
+   Compiling Bias_Merger.cpp_pre.cpp.tb.cpp
+   Compiling Gemv_Test.cpp_pre.cpp.tb.cpp
+   Compiling Mul_Adder_Tree_128.cpp_pre.cpp.tb.cpp
+   Compiling Scale_Loader_Distributor.cpp_pre.cpp.tb.cpp
+   Compiling SoftMax.cpp_pre.cpp.tb.cpp
+   Compiling Stream_Copy.cpp_pre.cpp.tb.cpp
+   Compiling tb_SoftMax.cpp_pre.cpp.tb.cpp
+   Compiling Weight_Loader.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Softmax_ir.ll
+   Generating cosim.tv.exe

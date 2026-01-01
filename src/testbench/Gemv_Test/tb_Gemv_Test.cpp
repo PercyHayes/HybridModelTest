@@ -159,6 +159,10 @@ int main(){
     std::cout << "\nVerifying output data..." << std::endl;
     bool all_passed = true;
     int error_count = 0;
+
+    // debug files
+    std::ofstream dump_ref("/home/percy/data/HDL/HybridModelTest/src/testbench/Gemv_Test/dump_ref_data.bin", std::ios::binary);
+    std::ofstream dump_out("/home/percy/data/HDL/HybridModelTest/src/testbench/Gemv_Test/dump_hls_output_data.bin", std::ios::binary);
     for (int oc = 0; oc < out_channels / NUM_LANES; ++oc) { // every NUM_LANES outputs packed in one packed_io_activation
         packed_io_activation out_data_packed = out_stream.read();
         for(int lane = 0; lane < NUM_LANES; ++lane){
@@ -175,6 +179,9 @@ int main(){
             activation_t ref_data = ref_output_data[out_ch];
             float out_data_float = static_cast<float>(out_data);
             float ref_data_float = static_cast<float>(ref_data);
+            //// save data for analysis
+            dump_ref.write(reinterpret_cast<const char*>(&ref_data_float), sizeof(float));
+            dump_out.write(reinterpret_cast<const char*>(&out_data_float), sizeof(float));
             // Use a tolerance for floating-point comparison
             float tolerance = 0.02f;
             float abs_error = std::fabs(out_data_float - ref_data_float);

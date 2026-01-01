@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'Loop_softmax_output_proc'
+================================================================
+* Date:           Sun Dec 21 23:34:18 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.228 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+    +---------+---------+-----------+-----------+-------+-------+---------+
+    |    16410|    16410|  82.050 us|  82.050 us|  16410|  16410|       no|
+    +---------+---------+-----------+-----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |                                                             |                                                   |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+        |                           Instance                          |                       Module                      |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |grp_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3_fu_82  |Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3  |     4100|     4100|  20.500 us|  20.500 us|  4097|  4097|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- softmax_output  |    16408|    16408|      4102|          -|          -|     4|        no|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       14|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      1|       70|      175|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       30|     -|
+|Register             |        -|      -|       73|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      1|      143|      219|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+----+-----+-----+
+    |                           Instance                          |                       Module                      | BRAM_18K| DSP| FF | LUT | URAM|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+----+-----+-----+
+    |grp_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3_fu_82  |Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3  |        0|   1|  70|  175|    0|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                        |                                                   |        0|   1|  70|  175|    0|
+    +-------------------------------------------------------------+---------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                                 Variable Name                                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |head_4_fu_102_p2                                                               |         +|   0|  0|   6|           3|           1|
+    |ap_block_state2                                                                |       and|   0|  0|   2|           1|           1|
+    |grp_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3_fu_82_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln83_fu_108_p2                                                            |      icmp|   0|  0|   2|           3|           4|
+    |ap_block_state1                                                                |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                          |          |   0|  0|  14|           9|           8|
+    +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |   3|          5|    1|          5|
+    |ap_done                        |   1|          2|    1|          2|
+    |head_fu_66                     |   8|          2|    3|          6|
+    |inv_sum_exp_stream_blk_n       |   1|          2|    1|          2|
+    |out_stream_TDATA_int_regslice  |  16|          2|   16|         32|
+    |seq_len_blk_n                  |   1|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  30|         15|   23|         49|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                   | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                 |   4|   0|    4|          0|
+    |ap_done_reg                                                               |   1|   0|    1|          0|
+    |grp_Loop_softmax_output_proc_Pipeline_VITIS_LOOP_86_3_fu_82_ap_start_reg  |   1|   0|    1|          0|
+    |head_fu_66                                                                |   3|   0|    3|          0|
+    |inv_sum_exp_reg_153                                                       |  16|   0|   16|          0|
+    |out_stream_TDATA_reg                                                      |  16|   0|   16|          0|
+    |seq_len_read_reg_145                                                      |  32|   0|   32|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                     |  73|   0|   73|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+--------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++-----------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_continue                        |   in|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  Loop_softmax_output_proc|  return value|
+|inv_sum_exp_stream_dout            |   in|   16|     ap_fifo|        inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_empty_n         |   in|    1|     ap_fifo|        inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_read            |  out|    1|     ap_fifo|        inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_num_data_valid  |   in|    8|     ap_fifo|        inv_sum_exp_stream|       pointer|
+|inv_sum_exp_stream_fifo_cap        |   in|    8|     ap_fifo|        inv_sum_exp_stream|       pointer|
+|seq_len_dout                       |   in|   32|     ap_fifo|                   seq_len|       pointer|
+|seq_len_empty_n                    |   in|    1|     ap_fifo|                   seq_len|       pointer|
+|seq_len_read                       |  out|    1|     ap_fifo|                   seq_len|       pointer|
+|seq_len_num_data_valid             |   in|    3|     ap_fifo|                   seq_len|       pointer|
+|seq_len_fifo_cap                   |   in|    3|     ap_fifo|                   seq_len|       pointer|
+|exp_bypass_stream_dout             |   in|   16|     ap_fifo|         exp_bypass_stream|       pointer|
+|exp_bypass_stream_empty_n          |   in|    1|     ap_fifo|         exp_bypass_stream|       pointer|
+|exp_bypass_stream_read             |  out|    1|     ap_fifo|         exp_bypass_stream|       pointer|
+|exp_bypass_stream_num_data_valid   |   in|   15|     ap_fifo|         exp_bypass_stream|       pointer|
+|exp_bypass_stream_fifo_cap         |   in|   15|     ap_fifo|         exp_bypass_stream|       pointer|
+|out_stream_TDATA                   |  out|   16|        axis|                out_stream|       pointer|
+|out_stream_TVALID                  |  out|    1|        axis|                out_stream|       pointer|
+|out_stream_TREADY                  |   in|    1|        axis|                out_stream|       pointer|
++-----------------------------------+-----+-----+------------+--------------------------+--------------+
+

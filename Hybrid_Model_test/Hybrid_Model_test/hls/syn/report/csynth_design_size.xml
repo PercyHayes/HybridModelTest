@@ -2,43 +2,40 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">,  3640, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">, 2127, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll, 33798, user unroll pragmas are applied</column>
-            <column name="">(2) simplification, 32502, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline, 21103, user inline pragmas are applied</column>
-            <column name="">(4) simplification,  7659, simplification of applied user inline pragmas</column>
+            <column name="">(1) unroll,   708, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   472, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   315, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   293, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(1) array partition,  7344, user array partition pragmas are applied</column>
-            <column name="">(2) simplification,  7328, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate ,  7392, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape, 19278, apply array reshape pragmas</column>
-            <column name="">(5) access patterns, 19302, array access pattern optmizations</column>
+            <column name="">(1) array partition,   290, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   290, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   290, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   290, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   295, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification, 19318, loop and instruction simplification</column>
-            <column name="">(2) parallelization, 19210, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 19190, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification, 19190, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification,   295, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   293, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   290, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   290, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 19122, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 23762, high level synthesis optimizations</column>
+            <column name="">(1) lowering,   313, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   366, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="Gemv_Test" col1="Gemv_Test.cpp:20" col2="3640" col3="7659" col4="19302" col5="19190" col6="23762">
-                    <row id="1" col0="Weight_Loader" col1="Weight_Loader.cpp:3" col2="100" col2_disp=" 100 (4 calls)" col3="60" col3_disp="  60 (4 calls)" col4="60" col4_disp="   60 (4 calls)" col5="56" col5_disp="   56 (4 calls)" col6=""/>
-                    <row id="6" col0="Scale_Loader_Distributor" col1="Scale_Loader_Distributor.cpp:13" col2="142" col3="49" col4="46" col5="45" col6=""/>
-                    <row id="5" col0="Stream_Copy" col1="Stream_Copy.cpp:3" col2="68" col3="543" col4="1176" col5="1174" col6=""/>
-                    <row id="2" col0="Mul_Adder_Tree_128" col1="Mul_Adder_Tree_128.cpp:4" col2="1497" col3="6432" col3_disp="6,432 (4 calls)" col4="17368" col4_disp="17,368 (4 calls)" col5="17276" col5_disp="17,276 (4 calls)" col6=""/>
-                    <row id="3" col0="Accumulator_Quantizer" col1="Accumulator_Quantizer.cpp:4" col2="1563" col3="460" col3_disp=" 460 (4 calls)" col4="464" col4_disp="  464 (4 calls)" col5="452" col5_disp="  452 (4 calls)" col6=""/>
-                    <row id="4" col0="Bias_Merger" col1="Bias_Merger.cpp:4" col2="136" col3="41" col4="38" col5="37" col6=""/>
+                <row id="0" col0="Softmax" col1="SoftMax.cpp:3" col2="2127" col3="293" col4="295" col5="290" col6="366">
+                    <row id="2" col0="half_exp" col1="exphalf.cpp:28" col2="4" col3="" col4="" col5="" col6="">
+                        <row id="1" col0="exp" col1="exphalf.cpp:15" col2="2" col3="" col4="" col5="" col6=""/>
+                    </row>
                 </row>
             </rows>
             <notes/>

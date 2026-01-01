@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'Softmax'
+================================================================
+* Date:           Sun Dec 21 23:34:18 2025
+
+* Version:        2025.1.1 (Build 6214317 on Sep 11 2025)
+* Project:        Hybrid_Model_test
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.649 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    28759|    28759|  0.144 ms|  0.144 ms|  16450|  16450|  dataflow|
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-------+-------+------------------------------------------------+
+        |                             |                          |  Latency (cycles) |   Latency (absolute)  |    Interval   |                    Pipeline                    |
+        |           Instance          |          Module          |   min   |   max   |    min    |    max    |  min  |  max  |                      Type                      |
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-------+-------+------------------------------------------------+
+        |Loop_max_value_proc_U0       |Loop_max_value_proc       |    16405|    16405|  82.025 us|  82.025 us|  16405|  16405|                                              no|
+        |Loop_sub_max_proc_U0         |Loop_sub_max_proc         |    16449|    16449|  82.245 us|  82.245 us|  16449|  16449|                                              no|
+        |Loop_divide_proc_U0          |Loop_divide_proc          |       11|       11|  55.000 ns|  55.000 ns|      4|      4|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |Loop_softmax_output_proc_U0  |Loop_softmax_output_proc  |    16410|    16410|  82.050 us|  82.050 us|  16410|  16410|                                              no|
+        +-----------------------------+--------------------------+---------+---------+-----------+-----------+-------+-------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        4|     -|
+|FIFO                 |        -|      -|      250|      559|     2|
+|Instance             |        0|      3|      818|     3180|     0|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|        -|     -|
+|Register             |        -|      -|        -|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      3|     1068|     3743|     2|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|     ~0|       ~0|       ~0|    ~0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|       ~0|       ~0|    ~0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------------------+---------+----+-----+------+-----+
+    |           Instance          |          Module          | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-----------------------------+--------------------------+---------+----+-----+------+-----+
+    |CTRL_BUS_s_axi_U             |CTRL_BUS_s_axi            |        0|   0|   68|   104|    0|
+    |Loop_divide_proc_U0          |Loop_divide_proc          |        0|   0|   16|    35|    0|
+    |Loop_max_value_proc_U0       |Loop_max_value_proc       |        0|   0|   92|   179|    0|
+    |Loop_softmax_output_proc_U0  |Loop_softmax_output_proc  |        0|   1|  143|   219|    0|
+    |Loop_sub_max_proc_U0         |Loop_sub_max_proc         |        0|   2|  499|  2643|    0|
+    +-----------------------------+--------------------------+---------+----+-----+------+-----+
+    |Total                        |                          |        0|   3|  818|  3180|    0|
+    +-----------------------------+--------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +----------------------+---------+----+----+-----+-------+-----+---------+
+    |         Name         | BRAM_18K| FF | LUT| URAM| Depth | Bits| Size:D*B|
+    +----------------------+---------+----+----+-----+-------+-----+---------+
+    |exp_bypass_stream_U   |        0|  61|   1|    -|  16384|   16|   262144|
+    |inv_sum_exp_stream_U  |        0|  17|   0|    -|    128|   16|     2048|
+    |max_bypass_stream_U   |        0|  61|   1|    -|  16384|   16|   262144|
+    |max_value_stream_U    |        0|  17|   0|    -|    128|   16|     2048|
+    |seq_len_c1_U          |        0|  70|   0|    -|      2|   32|       64|
+    |seq_len_c_U           |        0|   7|   0|    -|      3|   32|       96|
+    |sum_exp_stream_U      |        0|  17|   0|    -|    128|   16|     2048|
+    +----------------------+---------+----+----+-----+-------+-----+---------+
+    |Total                 |        0| 250|   2|    0|  33157|  144|   530592|
+    +----------------------+---------+----+----+-----+-------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Loop_sub_max_proc_U0_start_full_n  |       and|   0|  0|   2|           1|           1|
+    |ap_idle                            |       and|   0|  0|   2|           1|           1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0|   4|           2|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_CTRL_BUS_AWVALID  |   in|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_AWREADY  |  out|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_AWADDR   |   in|    5|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_WVALID   |   in|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_WREADY   |  out|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_WDATA    |   in|   32|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_WSTRB    |   in|    4|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_ARVALID  |   in|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_ARREADY  |  out|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_ARADDR   |   in|    5|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_RVALID   |  out|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_RREADY   |   in|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_RDATA    |  out|   32|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_RRESP    |  out|    2|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_BVALID   |  out|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_BREADY   |   in|    1|       s_axi|      CTRL_BUS|        scalar|
+|s_axi_CTRL_BUS_BRESP    |  out|    2|       s_axi|      CTRL_BUS|        scalar|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|       Softmax|  return value|
+|ap_rst_n                |   in|    1|  ap_ctrl_hs|       Softmax|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|       Softmax|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|       Softmax|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|       Softmax|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|       Softmax|  return value|
+|in_stream_TDATA         |   in|   16|        axis|     in_stream|       pointer|
+|in_stream_TVALID        |   in|    1|        axis|     in_stream|       pointer|
+|in_stream_TREADY        |  out|    1|        axis|     in_stream|       pointer|
+|out_stream_TDATA        |  out|   16|        axis|    out_stream|       pointer|
+|out_stream_TVALID       |  out|    1|        axis|    out_stream|       pointer|
+|out_stream_TREADY       |   in|    1|        axis|    out_stream|       pointer|
++------------------------+-----+-----+------------+--------------+--------------+
+

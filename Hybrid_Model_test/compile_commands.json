@@ -6,7 +6,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Bias_Merger.cpp"
     ],
@@ -19,7 +19,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp"
     ],
@@ -32,7 +32,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Stream_Copy.cpp"
     ],
@@ -45,7 +45,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Mul_Adder_Tree_128.cpp"
     ],
@@ -58,7 +58,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/scale_loader_distributor.cpp"
     ],
@@ -71,7 +71,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Scale_Loader_Distributor.cpp"
     ],
@@ -84,7 +84,20 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
+      "-c",
+      "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp"
+    ],
+    "file": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp"
+  },
+  {
+    "directory": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test",
+    "arguments": [
+      "/software/xilinx/2025.1.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Accumulator_Quantizer.cpp"
     ],
@@ -97,7 +110,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/weight_loader.cpp"
     ],
@@ -110,7 +123,7 @@
       "--gcc-toolchain=/software/xilinx/2025.1.1/Vitis/tps/lnx64/gcc-8.3.0",
       "-fhls",
       "-hls-syn-headers-dir=/software/xilinx/2025.1.1/Vitis/common/technology/autopilot",
-      "-fhlstoplevel=Gemv_Test",
+      "-fhlstoplevel=Softmax",
       "-c",
       "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Weight_Loader.cpp"
     ],
@@ -124,8 +137,8 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/software/xilinx/2025.1.1/Vitis/include",
       "-c",
-      "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/testbench/Gemv_Test/tb_Gemv_Test.cpp"
+      "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/testbench/Softmax/tb_SoftMax.cpp"
     ],
-    "file": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/testbench/Gemv_Test/tb_Gemv_Test.cpp"
+    "file": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/testbench/Softmax/tb_SoftMax.cpp"
   }
 ]

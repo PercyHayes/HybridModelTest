@@ -11,6 +11,12 @@
 #include <ap_fixed.h>
 #include <ap_int.h>
 #include <hls_vector.h>
+#include <hls_math.h>
+
+const int Q_HEAD_NUM = 8;
+const int V_HEAD_NUM = 1;
+const int MAX_KV_SEQ_LEN = 4096;
+const int HEAD_PARALLELISM = 2;
 
 const int NUM_LANES = 4;
 

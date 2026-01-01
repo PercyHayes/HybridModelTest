@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Dec 19 23:42:08 2025",
- "timestampMillis": "1766158928046",
+ "dateTimestamp": "Sun Dec 21 21:48:13 2025",
+ "timestampMillis": "1766324893046",
  "buildStep": {
-  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "cmdId": "a70acaf0-ab6c-44cd-bf7b-35eefcd82952",
   "name": "vitis-run",
   "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/logs/Hybrid_Model_test.steps.log",
   "commandLine": "/software/xilinx/2025.1.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg --work_dir Hybrid_Model_test ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Dec 19 23:42:08 2025",
- "timestampMillis": "1766158928046",
+ "dateTimestamp": "Sun Dec 21 21:48:13 2025",
+ "timestampMillis": "1766324893046",
  "status": {
-  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "cmdId": "a70acaf0-ab6c-44cd-bf7b-35eefcd82952",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Dec 19 23:42:12 2025",
- "timestampMillis": "1766158932442",
+ "dateTimestamp": "Sun Dec 21 21:48:17 2025",
+ "timestampMillis": "1766324897357",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -58,7 +58,7 @@
    {
     "base": {
      "type": "KERNEL",
-     "name": "Gemv_Test",
+     "name": "Softmax",
      "file": "",
      "reports": [],
      "uuid": ""
@@ -82,7 +82,9 @@
      "/home/percy/data/HDL/HybridModelTest/src/main/Gemv_Test.cpp",
      "/home/percy/data/HDL/HybridModelTest/src/main/Scale_Loader_Distributor.cpp",
      "/home/percy/data/HDL/HybridModelTest/src/main/Stream_Copy.cpp",
-     "/home/percy/data/HDL/HybridModelTest/src/main/Weight_Loader.cpp"
+     "/home/percy/data/HDL/HybridModelTest/src/main/Weight_Loader.cpp",
+     "/home/percy/data/HDL/HybridModelTest/src/include/SoftMax.h",
+     "/home/percy/data/HDL/HybridModelTest/src/main/SoftMax.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -98,10 +100,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Dec 19 23:42:12 2025",
- "timestampMillis": "1766158932442",
+ "dateTimestamp": "Sun Dec 21 21:48:17 2025",
+ "timestampMillis": "1766324897358",
  "buildStep": {
-  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "cmdId": "335c78f2-bdb4-45ba-9476-e1dace8bb1a7",
   "name": "",
   "logFile": "/home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/Hybrid_Model_test/hls/hls.log",
   "commandLine": "",
@@ -114,10 +116,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Dec 19 23:42:12 2025",
- "timestampMillis": "1766158932443",
+ "dateTimestamp": "Sun Dec 21 21:48:17 2025",
+ "timestampMillis": "1766324897358",
  "status": {
-  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "cmdId": "335c78f2-bdb4-45ba-9476-e1dace8bb1a7",
   "state": "CS_RUNNING"
  }
 }
@@ -125,10 +127,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Dec 19 23:42:24 2025",
- "timestampMillis": "1766158944067",
+ "dateTimestamp": "Sun Dec 21 21:49:06 2025",
+ "timestampMillis": "1766324946846",
  "status": {
-  "cmdId": "169ddb67-5f11-4edc-806a-be23490d7683",
+  "cmdId": "335c78f2-bdb4-45ba-9476-e1dace8bb1a7",
   "state": "CS_PASSED"
  }
 }
@@ -136,10 +138,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Dec 19 23:42:24 2025",
- "timestampMillis": "1766158944327",
+ "dateTimestamp": "Sun Dec 21 21:49:07 2025",
+ "timestampMillis": "1766324947144",
  "status": {
-  "cmdId": "d94f0c13-c834-4d95-bea4-47b9c95a8c36",
+  "cmdId": "a70acaf0-ab6c-44cd-bf7b-35eefcd82952",
   "state": "CS_PASSED"
  }
 }
@@ -147,8 +149,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Dec 19 23:42:24 2025",
- "timestampMillis": "1766158944328",
+ "dateTimestamp": "Sun Dec 21 21:49:07 2025",
+ "timestampMillis": "1766324947145",
  "report": {
   "path": "",
   "name": "",
@@ -161,8 +163,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Dec 19 23:42:24 2025",
- "timestampMillis": "1766158944328",
+ "dateTimestamp": "Sun Dec 21 21:49:07 2025",
+ "timestampMillis": "1766324947145",
  "report": {
   "path": "",
   "name": "",

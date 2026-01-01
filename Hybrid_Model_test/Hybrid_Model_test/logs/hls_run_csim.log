@@ -47,9 +47,13 @@ INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Stream_Copy.cpp' 
 INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Stream_Copy.cpp' to the project
 INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/Weight_Loader.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(29)
 INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/Weight_Loader.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=../src/testbench/Gemv_Test/tb_Gemv_Test.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(30)
-INFO: [HLS 200-10] Adding test bench file '/home/percy/data/HDL/HybridModelTest/src/testbench/Gemv_Test/tb_Gemv_Test.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=Gemv_Test' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/include/SoftMax.h' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/include/SoftMax.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/main/SoftMax.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(31)
+INFO: [HLS 200-10] Adding design file '/home/percy/data/HDL/HybridModelTest/src/main/SoftMax.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../src/testbench/Softmax/tb_SoftMax.cpp' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(32)
+INFO: [HLS 200-10] Adding test bench file '/home/percy/data/HDL/HybridModelTest/src/testbench/Softmax/tb_SoftMax.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=Softmax' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(9)
 INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
@@ -66,78 +70,30 @@ INFO: [HLS 200-2176] Writing Vitis IDE component file /home/percy/data/HDL/Hybri
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-make: 'csim.exe' is up to date.
---- Starting Testbench for Gemv_Test ---
-Loading weight data...
+   Compiling ../../../../../src/testbench/Softmax/tb_SoftMax.cpp in debug mode
+   Compiling ../../../../../src/main/SoftMax.cpp in debug mode
+   Compiling ../../../../../src/main/Weight_Loader.cpp in debug mode
+   Compiling ../../../../../src/main/Stream_Copy.cpp in debug mode
+   Compiling ../../../../../src/main/Scale_Loader_Distributor.cpp in debug mode
+   Compiling ../../../../../src/main/Gemv_Test.cpp in debug mode
+   Compiling ../../../../../src/main/Bias_Merger.cpp in debug mode
+   Compiling ../../../../../src/main/Accumulator_Quantizer.cpp in debug mode
+   Compiling ../../../../../src/main/Mul_Adder_Tree_128.cpp in debug mode
+   Generating csim.exe
+--- Starting Testbench for Softmax ---
 Loading input activation data...
-Loading bias data...
 Loading reference output data...
-Loading scaling data...
 
-Calling HLS function Gemv_Test...
-data: -0.795898, weight: 6
-data: -1.0498, weight: -7
-data: -1.48535, weight: 2
-data: -1.40234, weight: 7
-data: -0.817871, weight: 7
-data: 1.7002, weight: -3
-data: 0.506836, weight: 5
-data: -0.613281, weight: 5
-data: 1.38867, weight: 4
-data: 1.55762, weight: 2
-data: -1.77734, weight: 3
-result: 16.8438
-acc_value: 92.875, scale_value: 0.0171967acc result: 7.79817
-data: -0.795898, weight: -8
-data: -1.0498, weight: 7
-data: -1.48535, weight: -2
-data: -1.40234, weight: 7
-data: -0.817871, weight: -7
-data: 1.7002, weight: 7
-data: 0.506836, weight: -8
-data: -0.613281, weight: -2
-data: 1.38867, weight: -5
-data: 1.55762, weight: 7
-data: -1.77734, weight: 0
-result: -49.125
-acc_value: -4.0625, scale_value: 0.0287628acc result: -32.9284
-data: -0.795898, weight: 2
-data: -1.0498, weight: 1
-data: -1.48535, weight: 4
-data: -1.40234, weight: 7
-data: -0.817871, weight: 7
-data: 1.7002, weight: -1
-data: 0.506836, weight: 1
-data: -0.613281, weight: -4
-data: 1.38867, weight: 0
-data: 1.55762, weight: -3
-data: -1.77734, weight: -7
-result: -41.8125
-acc_value: -132.75, scale_value: 0.00520325acc result: 5.65427
-data: -0.795898, weight: 0
-data: -1.0498, weight: 7
-data: -1.48535, weight: 7
-data: -1.40234, weight: -5
-data: -0.817871, weight: 7
-data: 1.7002, weight: 3
-data: 0.506836, weight: 6
-data: -0.613281, weight: -5
-data: 1.38867, weight: 0
-data: 1.55762, weight: -4
-data: -1.77734, weight: -1
-result: 70.6875
-acc_value: 69.3125, scale_value: 0.0249939acc result: 4.25829
-Bias_Merger row 0, lane 0: bias_value = -5.48828, bias = 0.0691528, merged_result = -5.41797
-Bias_Merger row 0, lane 1: bias_value = 2.33789, bias = 0.682129, merged_result = 3.01953
-Bias_Merger row 0, lane 2: bias_value = 0.125244, bias = -0.841797, merged_result = -0.716797
-Bias_Merger row 0, lane 3: bias_value = 3.10938, bias = -0.897949, merged_result = 2.21094
+Calling HLS function Softmax...
 HLS function execution finished.
 
-Verifying output data...
-All outputs match the reference data. Test PASSED.
+Verifying output against reference data...
+All outputs match reference data within tolerance.
+Max absolute error: 4.76837e-07
+Average absolute error: 4.65079e-08
 --- Testbench Finished ---
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 25088
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16384
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 13.66 seconds. Total CPU system time: 1.04 seconds. Total elapsed time: 14.6 seconds; peak allocated memory: 668.824 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 18s
+INFO: [HLS 200-112] Total CPU user time: 49.04 seconds. Total CPU system time: 3.23 seconds. Total elapsed time: 52.36 seconds; peak allocated memory: 668.941 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 56s

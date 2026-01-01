@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2025.1.1 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Dec 19 23:44:48 2025</td></tr>
+<tr><td><b>Date</b></td><td>Sun Dec 21 23:34:20 2025</td></tr>
 <tr><td><b>Host</b></td><td>DESKTOP-KKEFB65 running 64-bit Ubuntu 22.04.5 LTS</td></tr>
 <tr><td><b>Command</b></td><td>/software/xilinx/2025.1.1/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/hls_config.cfg --work_dir Hybrid_Model_test </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 59
+<pre>Violations found: 20
 </pre>
 <pre>Rule Specs Violated: 3
 </pre>
@@ -3434,479 +3434,24 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_16_8'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">35</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'adder_2_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">44</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'adder_2_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">56</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.Gemv_Test.Kernel</td>
-<td align="left">Estimated clock period (5.962 ns) exceeds the target (target clock period: 5.000 ns, clock uncertainty: 1.350 ns, effective delay budget: 3.650 ns).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Latency</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.Gemv_Test.Latency</td>
-<td align="left">Cannot flatten loop 'VITIS_LOOP_11_1' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Accumulator_Quantizer.cpp#line=11">Accumulator_Quantizer.cpp</a>) in function 'Accumulator_Quantizer.9' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_64_32'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">33</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_8_4'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">30</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_64_32'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">42</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_8_4'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">54</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_17_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">There are a total of 8 such instances of non-canonical statements in the dataflow region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Mul_Adder_Tree_128.cpp#line=30">Mul_Adder_Tree_128.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'mul'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">28</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'mul'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">40</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_32_16'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">52</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_4_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Dataflow form checks found 4 issue(s) in file ../src/main/Gemv_Test.cpp
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 8, Final II = 5, Depth = 5, loop 'load_from_hbm'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'adder_2_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_128_64'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">50</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_16_8'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Either use an argument of the function or declare the variable inside the dataflow loop body (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=85">Gemv_Test.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">47</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_128_64'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">59</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.Gemv_Test.Kernel</td>
-<td align="left">**** Estimated Fmax: 167.74 MHz
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Latency</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.Gemv_Test.Latency</td>
-<td align="left">Cannot flatten loop 'VITIS_LOOP_11_1' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Accumulator_Quantizer.cpp#line=11">Accumulator_Quantizer.cpp</a>) in function 'Accumulator_Quantizer' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_8_4'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">36</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_17_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">48</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_64_32'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Either use an argument of the function or declare the variable inside the dataflow loop body (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=73">Gemv_Test.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">45</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_17_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">57</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.Gemv_Test.Kernel</td>
-<td align="left">The critical path in module 'Gemv_Test' consists of the following:
-	wire read operation ('cols_read', <a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=36">Gemv_Test.cpp</a>) on port 'cols' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=36">Gemv_Test.cpp</a>) [15]  (0.000 ns)
-	'call' operation 160 bit ('call_ret', <a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=59">Gemv_Test.cpp</a>) to 'Block_entry_proc' [185]  (3.294 ns)
-	'call' operation 0 bit ('_ln59', <a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=59">Gemv_Test.cpp</a>) to 'Weight_Loader' [191]  (2.668 ns)
-
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Latency</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.Gemv_Test.Latency</td>
-<td align="left">Cannot flatten loop 'VITIS_LOOP_11_1' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Accumulator_Quantizer.cpp#line=11">Accumulator_Quantizer.cpp</a>) in function 'Accumulator_Quantizer.7' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_32_16'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">34</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_4_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_32_16'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">43</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_4_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">55</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_14_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
 <td align="left">8</td>
 <td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Dataflow form checks found 2 issue(s) in file ../src/main/Mul_Adder_Tree_128.cpp
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Dataflow form checks found 4 issue(s) in file ../src/main/Gemv_Test.cpp
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">20</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
+<td align="left">13</td>
+<td align="left">Latency</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_128_64'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">32</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_16_8'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_128_64'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">41</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_16_8'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">53</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'adder_2_1'
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.Softmax.Latency</td>
+<td align="left">Cannot flatten loop 'softmax_output' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp#line=83">SoftMax.cpp</a>) in function 'Loop_softmax_output_proc' the outer loop is not a perfect loop.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3916,73 +3461,62 @@ window.onload = function () { addSorting(); }
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Either use an argument of the function or declare the variable inside the dataflow loop body (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=85">Gemv_Test.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.Softmax.Kernel</td>
+<td align="left">**** Estimated Fmax: 274.05 MHz
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.Softmax.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">There are a total of 4 such instances of non-canonical statements in the dataflow region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp#line=14">SoftMax.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
 <td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Mul_Adder_Tree_128.cpp#line=30">Mul_Adder_Tree_128.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'row_loop_col_loop'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">15</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_17_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_64_32'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">51</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_8_4'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
+<td align="left">7</td>
 <td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
 <td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=36">Gemv_Test.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
@@ -3993,96 +3527,129 @@ window.onload = function () { addSorting(); }
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_57_2'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">13</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
+<td align="left">14</td>
+<td align="left">Latency</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_9_1'
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.Softmax.Latency</td>
+<td align="left">Cannot flatten loop 'max_value' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp#line=38">SoftMax.cpp</a>) in function 'Loop_max_value_proc' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">25</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_4_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'mul'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">49</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'adder_32_16'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">2</td>
+<td align="left">4</td>
 <td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
 <td align="left">Either use an argument of the function or declare the variable inside the dataflow loop body (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=73">Gemv_Test.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">46</td>
+<td align="left">3</td>
 <td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.Gemv_Test.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'mul'
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Dataflow form checks found 2 issue(s) in file ../src/main/SoftMax.cpp
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">58</td>
-<td align="left">Kernel</td>
+<td align="left">17</td>
+<td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.Gemv_Test.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'divide'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">There are a total of 8 such instances of non-canonical statements in the dataflow region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Mul_Adder_Tree_128.cpp#line=30">Mul_Adder_Tree_128.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_41_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Either use an argument of the function or declare the variable inside the dataflow loop body (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Gemv_Test.cpp#line=73">Gemv_Test.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Latency</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.Softmax.Latency</td>
+<td align="left">Cannot flatten loop 'sub_max' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp#line=52">SoftMax.cpp</a>) in function 'Loop_sub_max_proc' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">11</td>
-<td align="left">Latency</td>
+<td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.Gemv_Test.Latency</td>
-<td align="left">Cannot flatten loop 'VITIS_LOOP_11_1' (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/Accumulator_Quantizer.cpp#line=11">Accumulator_Quantizer.cpp</a>) in function 'Accumulator_Quantizer.5' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Dataflow form checks found 2 issue(s) in file ../src/main/Mul_Adder_Tree_128.cpp
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///home/percy/data/HDL/HybridModelTest/Hybrid_Model_test/../src/main/SoftMax.cpp#line=14">SoftMax.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.Softmax.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_86_3'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

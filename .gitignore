@@ -5,6 +5,7 @@
 # Ignore object files and dependent files
 *.o
 *.d
+*.csv
 
 
 
